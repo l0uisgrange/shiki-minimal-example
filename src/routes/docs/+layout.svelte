@@ -2,9 +2,9 @@
 	let { children } = $props();
 </script>
 
-<div class="mx-auto grid max-w-7xl grid-cols-4 px-5">
+<div class="mx-auto flex items-start px-5">
 	<div class="font-medium">deded</div>
-	<article class="col-span-2">
+	<article class="flex-auto py-10">
 		{@render children()}
 	</article>
 	<div></div>

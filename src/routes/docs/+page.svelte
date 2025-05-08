@@ -25,7 +25,7 @@
 </ul>
 <Code content={'#import "PATH_TO_CIRCUITOR/src/exports.typ"'} />
 
-<!--<h2 class="mt-5">Notice Component Examples</h2>
+<h2 class="mt-5">Notice Component Examples</h2>
 <p>Here are examples of the Notice component with different variants:</p>
 
 <Notice type="info" title="Information">
@@ -51,4 +51,4 @@
 <h3 class="mt-3">Usage</h3>
 <Code content={`<Notice type="info" title="Optional Title">
   Your notice content goes here.
-</Notice>`} />-->
+</Notice>`} />

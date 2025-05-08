@@ -18,16 +18,28 @@
 
 @theme {
     --font-display: "Mona Sans", "sans-serif";
+
+    --color-neutral-900: rgb(13,17,23);
+    --color-neutral-800: #151b23;
+    --color-neutral-100: rgb(246, 248, 250);
 }
 
 html {
     @apply font-display antialiased;
 
+
+    pre {
+        @apply bg-neutral-100! dark:bg-neutral-800!;
+    }
     pre code {
         white-space: pre-wrap;
         font-family: 'Mona Space', monospace;
         font-size: 14px
     }
+}
+
+body {
+    @apply dark:bg-neutral-900 dark:text-white;
 }
 
 h1 {

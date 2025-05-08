@@ -5,10 +5,8 @@
 	let { children } = $props();
 </script>
 
-<div class="py-4">
-	<div
-		class="mx-auto flex max-w-7xl items-center justify-between px-5 py-2.5 text-lg font-medium"
-	>
+<div class="dark:gray-dark border-b border-neutral-200 py-3">
+	<div class="mx-auto flex items-center justify-between px-5 py-2.5 text-lg font-medium">
 		<a href="/circuitor">Circuitor</a>
 		<a
 			class="opacity-50 transition hover:opacity-75"

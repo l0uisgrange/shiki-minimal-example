@@ -5,21 +5,25 @@
 	let { content, language = 'typst' } = $props();
 
 	let code: string = $state('');
+	let isDarkMode = $state(false);
 
 	onMount(async () => {
+		const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+		isDarkMode = darkModeQuery.matches;
+		darkModeQuery.addEventListener('change', (event) => {
+			isDarkMode = event.matches;
+		});
 		const highlighter = await createHighlighter({
-			themes: ['github-dark'],
+			themes: ['github-light-default', 'github-dark-default'],
 			langs: ['typst']
 		});
 		code = highlighter.codeToHtml(content.toString(), {
-			theme: 'github-dark',
+			theme: isDarkMode ? 'github-dark-default' : 'github-light-default',
 			lang: language
 		});
 	});
 </script>
 
-<div class="overflow-hidden rounded-xl bg-neutral-950 p-1 text-base">
-	<div class="rounded-lg bg-[#24292e] px-4 py-3 ring-1 ring-white/15 ring-inset">
-		{@html code}
-	</div>
+<div class="bg-neutral-100 px-4 py-3 dark:bg-neutral-800">
+	{@html code}
 </div>
