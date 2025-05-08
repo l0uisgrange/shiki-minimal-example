@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="flex min-h-screen w-screen flex-col items-center justify-center bg-neutral-900 py-20 text-center text-white"
+	class="flex min-h-screen w-screen flex-col items-center justify-center bg-neutral-900 py-16 text-center text-white md:py-20"
 >
 	<span class="max-w-3xl text-4xl font-bold font-stretch-expanded md:text-7xl">
 		Draw electronic circuits like a champion

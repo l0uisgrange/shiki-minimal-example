@@ -21,7 +21,7 @@
 </script>
 
 <div class="flex items-start">
-	<main>
+	<main class="p-5 pt-10 md:px-8 md:py-10">
 		<h1>Get started</h1>
 		<p class="max-w-2xl text-lg">
 			Circuitor is easy to set up and works out of the box with <a
@@ -55,7 +55,7 @@
 			your .typ file.
 		</p>
 	</main>
-	<div class="relative h-full w-72 flex-none p-5">
+	<div class="relative hidden h-full w-72 flex-none p-5 md:block">
 		<ul class="sticky top-20">
 			{#each headings as heading}
 				<li style="margin-left: {heading.level * 10}px;">

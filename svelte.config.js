@@ -7,8 +7,10 @@ const config = {
 
 	kit: {
 		adapter: adapter({
+			pages: 'build',
+			assets: 'build',
 			fallback: 'index.html',
-			trailingSlash: 'always'
+			precompress: false
 		}),
 		paths: {
 			base: process.env.NODE_ENV === 'development' ? '' : '/circuitor'
