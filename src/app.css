@@ -1,2 +1,17 @@
 @import 'tailwindcss';
 
+@font-face {
+    font-family: "Mona Sans";
+    font-style: normal;
+    font-weight: 200 700;
+    font-display: swap;
+    src: url("/Mona-Sans.woff2") format("woff2");
+}
+
+@theme {
+    --font-display: "Mona Sans", "sans-serif";
+}
+
+html {
+    @apply font-display;
+}
