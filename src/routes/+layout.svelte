@@ -6,7 +6,9 @@
 	let { children } = $props();
 </script>
 
-<div class="dark:gray-dark dark:border-neutral-border border-b border-neutral-200 py-3">
+<div
+	class="dark:gray-dark dark:border-neutral-border sticky top-0 left-0 z-10 border-b border-neutral-200 bg-white py-3 dark:bg-neutral-900"
+>
 	<div class="mx-auto flex items-center justify-between px-5 py-2.5 text-lg font-medium">
 		<a href="/circuitor">Circuitor</a>
 		<a
