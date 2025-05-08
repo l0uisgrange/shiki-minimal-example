@@ -1,11 +1,29 @@
 <script lang="ts">
-	import circuit from "$lib/main.svg"
+	import circuit from '$lib/main.svg';
 </script>
 
-<div class="min-h-screen w-screen bg-neutral-700 text-center text-white flex flex-col justify-center items-center">
-	<h1 class="text-7xl font-bold font-stretch-expanded max-w-3xl">Draw electronic circuits like a champion</h1>
+<div
+	class="flex min-h-screen w-screen flex-col items-center justify-center bg-neutral-900 py-20 text-center text-white"
+>
+	<span class="max-w-3xl text-7xl font-bold font-stretch-expanded">
+		Draw electronic circuits like a champion
+	</span>
+	<div class="mt-8 flex items-center gap-3">
+		<a
+			href="/circuitor/docs"
+			class="rounded-full bg-white px-5 py-2 font-medium text-neutral-900 transition hover:bg-white/80"
+		>
+			Documentation
+		</a>
+		<a
+			href="/circuitor/examples"
+			class="rounded-full bg-black/20 px-5 py-2.5 font-medium text-white transition hover:bg-black/40"
+		>
+			Examples
+		</a>
+	</div>
 	<div>
 		<img src={circuit} alt="circuit" />
 	</div>
-	<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+	<p>This website is still a Work In Progress</p>
 </div>

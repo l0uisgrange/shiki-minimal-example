@@ -1,6 +1,14 @@
 @import 'tailwindcss';
 
 @font-face {
+    font-family: "Mona Space";
+    font-style: normal;
+    font-weight: 200 700;
+    font-display: swap;
+    src: url("/MonaspaceArgon.ttf") format("truetype");
+}
+
+@font-face {
     font-family: "Mona Sans";
     font-style: normal;
     font-weight: 200 700;
@@ -13,5 +21,21 @@
 }
 
 html {
-    @apply font-display;
+    @apply font-display antialiased;
+
+    pre code {
+        white-space: pre-wrap;
+        font-family: 'Mona Space', monospace;
+        font-size: 14px
+    }
+}
+
+h1 {
+    @apply text-4xl font-semibold font-stretch-105% mb-5;
+}
+h2 {
+    @apply text-2xl font-semibold mb-3;
+}
+p, ul {
+    @apply subpixel-antialiased mb-2;
 }
