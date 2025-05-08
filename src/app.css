@@ -18,16 +18,14 @@
 
 @theme {
     --font-display: "Mona Sans", "sans-serif";
-
     --color-neutral-900: rgb(13,17,23);
+    --color-neutral-border: #3d444d;
     --color-neutral-800: #151b23;
     --color-neutral-100: rgb(246, 248, 250);
 }
 
 html {
     @apply font-display antialiased;
-
-
     pre {
         @apply bg-neutral-100! dark:bg-neutral-800!;
     }
@@ -42,11 +40,15 @@ body {
     @apply dark:bg-neutral-900 dark:text-white;
 }
 
+.border-* {
+    @apply border-neutral-200 dark:border-neutral-800;
+}
+
 h1 {
     @apply text-4xl font-semibold font-stretch-105% mb-5;
 }
 h2 {
-    @apply text-2xl font-semibold mb-3;
+    @apply text-2xl font-semibold mb-3 mt-6;
 }
 p, ul {
     @apply subpixel-antialiased mb-2;

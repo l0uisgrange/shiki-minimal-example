@@ -24,6 +24,6 @@
 	});
 </script>
 
-<div class="bg-neutral-100 px-4 py-3 dark:bg-neutral-800">
+<div class="mb-2 bg-neutral-100 px-4 py-3 dark:bg-neutral-800">
 	{@html code}
 </div>

@@ -5,7 +5,7 @@
 <div
 	class="flex min-h-screen w-screen flex-col items-center justify-center bg-neutral-900 py-20 text-center text-white"
 >
-	<span class="max-w-3xl text-7xl font-bold font-stretch-expanded">
+	<span class="max-w-3xl text-4xl font-bold font-stretch-expanded md:text-7xl">
 		Draw electronic circuits like a champion
 	</span>
 	<div class="mt-8 flex items-center gap-3">
@@ -17,7 +17,7 @@
 		</a>
 		<a
 			href="/circuitor/examples"
-			class="rounded-full bg-black/20 px-5 py-2.5 font-medium text-white transition hover:bg-black/40"
+			class="rounded-full bg-black/50 px-5 py-2.5 font-medium text-white transition hover:bg-black/70"
 		>
 			Examples
 		</a>
