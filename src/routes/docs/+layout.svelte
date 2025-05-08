@@ -12,11 +12,9 @@
 		<NavButton href="/circuitor/docs" active={page.url.pathname === '/circuitor/docs'}
 			>Get started</NavButton
 		>
-		<NavButton href="/circuitor/" active={page.url.pathname === '/circuitor/docs'}
-			>Get started</NavButton
-		>
-		<NavButton href="/circuitor" active={page.url.pathname === '/circuitor/docs'}
-			>Get started</NavButton
+		<NavButton
+			href="/circuitor/docs/components"
+			active={page.url.pathname.startsWith('/circuitor/components')}>Components</NavButton
 		>
 	</div>
 	<article class="flex-auto">

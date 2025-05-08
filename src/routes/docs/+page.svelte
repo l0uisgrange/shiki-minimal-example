@@ -20,9 +20,13 @@
 	});
 </script>
 
+<svelte:head>
+	<title>Getting started</title>
+</svelte:head>
+
 <div class="flex items-start">
 	<main class="min-h-dvh p-5 pt-10 md:px-8 md:py-10">
-		<h1>Get started</h1>
+		<h1>Getting started</h1>
 		<p class="max-w-2xl text-lg">
 			Circuitor is easy to set up and works out of the box with <a
 				target="_blank"
@@ -72,15 +76,13 @@
 			To get started with Circuitor, here’s a minimal working example showing how to draw a
 			simple circuit with just a few lines of code.
 		</p>
-		<p>
-			<Code
-				content={'#import "@preview/circuitor:0.1.0"\n\n' +
-					'#canvas({\n' +
-					'  import circuitor: *\n' +
-					'  ...\n' +
-					'})'}
-			/>
-		</p>
+		<Code
+			content={'#import "@preview/circuitor:0.1.0"\n\n' +
+				'#canvas({\n' +
+				'  import circuitor: *\n' +
+				'  ...\n' +
+				'})'}
+		/>
 	</main>
 	<div class="relative hidden h-full w-72 flex-none p-5 md:block">
 		<ul class="sticky top-20">

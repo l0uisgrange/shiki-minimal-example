@@ -2,6 +2,10 @@
 	import circuit from '$lib/main.svg';
 </script>
 
+<svelte:head>
+	<title>Circuitor – Your Typst Circuit Drawing Companion</title>
+</svelte:head>
+
 <div
 	class="flex min-h-screen w-screen flex-col items-center justify-center bg-neutral-900 py-16 text-center text-white md:py-20"
 >
