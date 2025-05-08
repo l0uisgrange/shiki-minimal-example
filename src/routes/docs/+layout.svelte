@@ -5,9 +5,9 @@
 	let { children } = $props();
 </script>
 
-<div class="relative flex max-w-screen items-start overflow-hidden">
+<div class="relative flex max-w-screen overflow-hidden">
 	<div
-		class="dark:border-neutral-border sticky top-32 left-0 hidden min-h-screen w-72 flex-none space-y-1 border-r border-neutral-200 p-5 font-medium md:block"
+		class="dark:border-neutral-border sticky top-32 left-0 hidden min-h-full w-72 flex-none space-y-1 border-r border-neutral-200 p-5 font-medium md:block"
 	>
 		<NavButton href="/circuitor/docs" active={page.url.pathname === '/circuitor/docs'}
 			>Get started</NavButton
