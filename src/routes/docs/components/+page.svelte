@@ -3,7 +3,7 @@
 	import SearchInput from '$lib/components/SearchInput.svelte';
 	import { components } from '$lib/components';
 
-	let results = $state(components);
+	let results = $state(components.toSorted((a, b) => a.name.localeCompare(b.name)));
 </script>
 
 <svelte:head>
@@ -28,12 +28,12 @@
 			{#each results as component}
 				<a
 					href="/circuitor/docs/components/"
-					class="dark:border-neutral-border group rounded-lg border border-neutral-200 p-2 text-current! decoration-0! hover:shadow-xs"
+					class="dark:border-neutral-border group rounded-xl border border-neutral-200 p-2.5 text-current! decoration-0! hover:shadow-xs"
 				>
 					<img
 						src={component.image}
 						alt={component.name}
-						class="dark:border-neutral-border mb-3 w-full scale-100 overflow-hidden rounded-md border border-neutral-200 transition group-hover:scale-105"
+						class="dark:border-neutral-border mb-3 w-full scale-100 overflow-hidden rounded-lg border border-neutral-200 transition group-hover:scale-103"
 					/>
 					<div>
 						<h3 class="font-medium decoration-0">{component.name}</h3>
