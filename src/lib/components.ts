@@ -6,6 +6,8 @@ import fuse from './images/fuse.svg';
 import diode from './images/diode.svg';
 import led from './images/led.svg';
 import dcmotor from './images/dcmotor.svg';
+import ground from './images/ground.svg';
+import earth from './images/earth.svg';
 
 export interface Component {
 	name: string;
@@ -53,5 +55,15 @@ export const components: Component[] = [
 		name: 'dcmotor',
 		category: 'direct current motor',
 		image: dcmotor
+	},
+	{
+		name: 'ground',
+		category: 'ground',
+		image: ground
+	},
+	{
+		name: 'earth',
+		category: 'earth',
+		image: earth
 	}
 ];

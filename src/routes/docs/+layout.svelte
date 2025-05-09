@@ -14,7 +14,8 @@
 		>
 		<NavButton
 			href="/circuitor/docs/components"
-			active={page.url.pathname.startsWith('/circuitor/components')}>Components</NavButton
+			active={page.url.pathname.startsWith('/circuitor/docs/components')}
+			>Components</NavButton
 		>
 	</div>
 	<article class="flex-auto">

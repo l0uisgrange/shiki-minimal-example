@@ -11,7 +11,8 @@
 	class="flex min-h-screen w-screen flex-col items-center justify-center bg-gradient-to-b from-neutral-900/92 to-neutral-900 py-16 text-center text-white md:py-20"
 >
 	<span class="max-w-3xl text-4xl font-bold font-stretch-expanded md:text-7xl">
-		Your <img src={typst} class="-mb-3 inline h-20" alt="typst" /> <br /> circuit drawing companion
+		Your <img src={typst} class="-mb-3 inline h-14 md:h-20" alt="typst" /> <br /> circuit drawing
+		companion
 	</span>
 	<div class="mt-8 flex items-center gap-3">
 		<a

@@ -13,11 +13,11 @@
 >
 	<div class="mx-auto flex items-center justify-between gap-5 px-5 py-2.5">
 		<a href="/circuitor" class="text-lg font-medium">Circuitor</a>
-		<span class="hidden font-mono text-neutral-500 antialiased sm:block">v0.1.0</span>
+		<span class="font-mono text-neutral-500 antialiased">v0.1.0</span>
 		<a href="/circuitor/docs" class="ml-auto hidden md:block">Documentation</a>
 		<a href="/circuitor/examples" class="hidden md:block">Examples</a>
 		<a
-			class="mt-1.5 ml-5 opacity-50 transition hover:opacity-75"
+			class="mt-1.5 ml-auto opacity-50 transition hover:opacity-75 md:ml-5"
 			href="https://typst.app/universe/package/circuitor"
 			target="_blank"
 		>
@@ -38,7 +38,7 @@
 	{@render children()}
 </div>
 <div
-	class="dark:border-neutral-border flex items-center justify-between border-t border-neutral-200 px-5 py-5"
+	class="dark:border-neutral-border flex flex-col border-t border-neutral-200 px-5 py-5 md:flex-row md:items-center md:justify-between"
 >
 	<span
 		>A project by <a href="https://github.com/l0uisgrange" class="font-medium">@l0uisgrange</a
