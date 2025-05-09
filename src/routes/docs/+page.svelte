@@ -35,7 +35,7 @@
 		</p>
 		<h2>Typst Universe</h2>
 		<p>
-			If you’re working in the online Typst app, you can import Circuitor directly with a
+			If you're working in the online Typst app, you can import Circuitor directly with a
 			single line.
 		</p>
 		<Notice type="info" title="Information">
@@ -47,7 +47,10 @@
 		<h2 class="mt-3">Local package</h2>
 		<p>
 			If you prefer to work offline or want to explore the source code, you can also use
-			Circuitor by downloading it locally from the GitHub repository.
+			Circuitor by downloading it locally from the <a
+				target="_blank"
+				href="https://github.com/l0uisgrange/circuitor">GitHub repository</a
+			>.
 		</p>
 		<ul class="ms-7 list-outside list-decimal">
 			<li>Clone or download the repository to your computer.</li>

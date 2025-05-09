@@ -13,6 +13,10 @@
 			>Get started</NavButton
 		>
 		<NavButton
+			href="/circuitor/docs/positioning"
+			active={page.url.pathname === '/circuitor/docs/positioning'}>Positioning</NavButton
+		>
+		<NavButton
 			href="/circuitor/docs/components"
 			active={page.url.pathname.startsWith('/circuitor/docs/components')}
 			>Components</NavButton

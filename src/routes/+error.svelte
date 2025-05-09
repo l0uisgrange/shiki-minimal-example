@@ -1,4 +1,4 @@
-<div class="flex flex-col items-center justify-center py-32">
+<div class="flex min-h-[80dvh] flex-col items-center justify-center">
 	<span class="mb-6 font-mono text-7xl text-blue-600 antialiased">404</span>
 	<h1>Not found</h1>
 	<a
