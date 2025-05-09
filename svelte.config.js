@@ -7,8 +7,8 @@ const config = {
 
 	kit: {
 		adapter: adapter({
-			pages: 'build',
-			assets: 'build',
+			pages: '../circetz/docs/',
+			assets: '../circetz/docs/',
 			fallback: 'index.html',
 			precompress: false
 		}),
