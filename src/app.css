@@ -23,17 +23,16 @@
     --color-neutral-800: #151b23;
     --color-neutral-100: rgb(246, 248, 250);
     --color-blue-600: #0969da;
+    --font-mono: 'Mona Space', monospace;
 }
 
 html {
-    @apply font-display antialiased scroll-smooth;
+    @apply font-display scroll-smooth;
     pre {
-        @apply bg-neutral-100! dark:bg-neutral-800!;
+        @apply bg-neutral-100! antialiased dark:bg-neutral-800!;
     }
     pre code {
-        white-space: pre-wrap;
-        font-family: 'Mona Space', monospace;
-        font-size: 14px
+        @apply text-sm font-mono whitespace-pre-wrap;
     }
 }
 

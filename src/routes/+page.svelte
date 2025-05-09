@@ -1,5 +1,6 @@
 <script lang="ts">
 	import circuit from '$lib/main.svg';
+	import typst from '$lib/typst-light.svg';
 </script>
 
 <svelte:head>
@@ -7,10 +8,10 @@
 </svelte:head>
 
 <div
-	class="flex min-h-screen w-screen flex-col items-center justify-center bg-neutral-900 py-16 text-center text-white md:py-20"
+	class="flex min-h-screen w-screen flex-col items-center justify-center bg-gradient-to-b from-neutral-900/90 to-neutral-900 py-16 text-center text-white md:py-20"
 >
 	<span class="max-w-3xl text-4xl font-bold font-stretch-expanded md:text-7xl">
-		Draw electronic circuits like a champion
+		Your <img src={typst} class="-mb-3 inline h-20" alt="typst" /> <br /> circuit drawing companion
 	</span>
 	<div class="mt-8 flex items-center gap-3">
 		<a
