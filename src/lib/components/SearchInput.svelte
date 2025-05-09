@@ -28,20 +28,20 @@
 	});
 </script>
 
-<div class="w-full">
+<div class="max-w-sm">
 	<div class="relative">
 		<input
 			type="text"
 			bind:value={searchQuery}
-			placeholder="Search components by name or category..."
-			class="dark:border-neutral-border w-full rounded-md border border-neutral-200 px-3 py-1.5 subpixel-antialiased focus:border-blue-600 focus:ring-1 focus:ring-blue-600 focus:outline-none"
+			placeholder="Search components"
+			class="dark:border-neutral-border w-full rounded-full border border-neutral-200 px-4 py-1.5 subpixel-antialiased focus:border-blue-600 focus:ring-1 focus:ring-blue-600 focus:outline-none"
 		/>
 		{#if searchQuery.trim()}
 			<button
-				class="absolute top-1/2 right-2 -translate-y-1/2 text-gray-500 hover:text-gray-700"
+				class="absolute top-1/2 right-2 -translate-y-1/2 cursor-pointer rounded-full bg-neutral-800 px-3 py-1 text-xs text-white"
 				onclick={() => (searchQuery = '')}
 			>
-				✕
+				cancel
 			</button>
 		{/if}
 	</div>

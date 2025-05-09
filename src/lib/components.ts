@@ -1,4 +1,4 @@
-import button from './images/button.svg';
+import button from './images/resistor.svg';
 
 export interface Component {
 	name: string;

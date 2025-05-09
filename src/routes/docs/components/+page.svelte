@@ -24,21 +24,24 @@
 		>
 		<span class="h-5"></span>
 		<SearchInput items={components} bind:results />
-		<div class="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+		<div class="mt-4 grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
 			{#each results as component}
-				<div class="rounded-md border p-4 transition-shadow hover:shadow-md">
-					<div class="flex items-center gap-3">
-						<div
-							class="flex h-10 w-10 items-center justify-center rounded-md bg-gray-100"
-						>
-							<img src={component.image} alt={component.name} class="h-6 w-6" />
-						</div>
-						<div>
-							<h3 class="font-medium">{component.name}</h3>
-							<p class="text-sm text-gray-500">{component.category}</p>
-						</div>
+				<a
+					href="/circuitor/docs/components/"
+					class="dark:border-neutral-border group rounded-lg border border-neutral-200 p-2 text-current! decoration-0! hover:shadow-xs"
+				>
+					<img
+						src={component.image}
+						alt={component.name}
+						class="dark:border-neutral-border mb-3 w-full scale-100 overflow-hidden rounded-md border border-neutral-200 transition group-hover:scale-105"
+					/>
+					<div>
+						<h3 class="font-medium decoration-0">{component.name}</h3>
+						<p class="mb-0! text-sm text-gray-700 decoration-0 dark:text-gray-200">
+							{component.category}
+						</p>
 					</div>
-				</div>
+				</a>
 			{/each}
 		</div>
 	</main>
