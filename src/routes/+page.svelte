@@ -8,7 +8,7 @@
 </svelte:head>
 
 <div
-	class="flex min-h-screen w-screen flex-col items-center justify-center bg-gradient-to-b from-neutral-900/90 to-neutral-900 py-16 text-center text-white md:py-20"
+	class="flex min-h-screen w-screen flex-col items-center justify-center bg-gradient-to-b from-neutral-900/92 to-neutral-900 py-16 text-center text-white md:py-20"
 >
 	<span class="max-w-3xl text-4xl font-bold font-stretch-expanded md:text-7xl">
 		Your <img src={typst} class="-mb-3 inline h-20" alt="typst" /> <br /> circuit drawing companion
@@ -30,5 +30,37 @@
 	<div>
 		<img src={circuit} alt="circuit" />
 	</div>
-	<p>This website is still a Work In Progress</p>
+</div>
+<div
+	class="flex-col items-center justify-center bg-neutral-900 px-5 pb-20 text-center text-white md:pb-32"
+>
+	<h1>Forget about circuitikz, we're in 2025</h1>
+	<div
+		class="mx-auto mt-20 grid max-w-5xl gap-10 text-left *:rounded-lg *:bg-white/10 *:p-5 lg:grid-cols-3"
+	>
+		<div>
+			<h2 class="mt-0!">Standard</h2>
+			<p>
+				Circuitor uses standard IEC and IEEE symbol conventions, making it easy to create
+				clear and accurate circuit diagrams that are instantly recognizable and
+				understandable to fellow engineers and students.
+			</p>
+		</div>
+		<div>
+			<h2 class="mt-0!">Intuitive</h2>
+			<p>
+				Designed for simplicity, Circuitor uses an intuitive syntax that makes drawing
+				circuits accessible, even for those new to Typst. Focus on your design, not on
+				complex commands.
+			</p>
+		</div>
+		<div>
+			<h2 class="mt-0!">CeTZ compatible</h2>
+			<p>
+				Leverage the power and flexibility of CeTZ. Circuitor is built to be compatible,
+				allowing you to use a rich ecosystem of Typst tools and packages for extended
+				drawing possibilities.
+			</p>
+		</div>
+	</div>
 </div>

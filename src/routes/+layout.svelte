@@ -13,12 +13,13 @@
 >
 	<div class="mx-auto flex items-center justify-between gap-5 px-5 py-2.5">
 		<a href="/circuitor" class="text-lg font-medium">Circuitor</a>
-		<span class="font-mono text-neutral-500 antialiased">v0.1.0</span>
-		<a href="/circuitor/docs" class="ml-auto">Documentation</a>
-		<a href="/circuitor/examples">Examples</a>
+		<span class="hidden font-mono text-neutral-500 antialiased sm:block">v0.1.0</span>
+		<a href="/circuitor/docs" class="ml-auto hidden md:block">Documentation</a>
+		<a href="/circuitor/examples" class="hidden md:block">Examples</a>
 		<a
 			class="mt-1.5 ml-5 opacity-50 transition hover:opacity-75"
 			href="https://typst.app/universe/package/circuitor"
+			target="_blank"
 		>
 			<img src={typst} alt="typst" class="h-5 dark:hidden" />
 			<img src={typstlight} alt="typst" class="hidden h-5 dark:block" />
@@ -26,6 +27,7 @@
 		<a
 			class="opacity-50 transition hover:opacity-75"
 			href="https://github.com/l0uisgrange/circuitor"
+			target="_blank"
 		>
 			<img src={github} alt="github" class="size-7 dark:hidden" />
 			<img src={githublight} alt="github" class="hidden size-7 dark:block" />
@@ -34,4 +36,13 @@
 </div>
 <div class="max-w-screen">
 	{@render children()}
+</div>
+<div
+	class="dark:border-neutral-border flex items-center justify-between border-t border-neutral-200 px-5 py-5"
+>
+	<span
+		>A project by <a href="https://github.com/l0uisgrange" class="font-medium">@l0uisgrange</a
+		></span
+	>
+	<span class="text-neutral-600">Project under LGPL-3.0 license</span>
 </div>
