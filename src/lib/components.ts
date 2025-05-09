@@ -1,4 +1,7 @@
-import button from './images/resistor.svg';
+import resistor from './images/resistor.svg';
+import inductor from './images/inductor.svg';
+import isource from './images/isource.svg';
+import vsource from './images/vsource.svg';
 
 export interface Component {
 	name: string;
@@ -8,8 +11,23 @@ export interface Component {
 
 export const components: Component[] = [
 	{
-		name: 'Resistor',
-		category: 'Classic',
-		image: button
+		name: 'resistor',
+		category: 'resistor',
+		image: resistor
+	},
+	{
+		name: 'inductor',
+		category: 'inductor',
+		image: inductor
+	},
+	{
+		name: 'isource',
+		category: 'current source',
+		image: isource
+	},
+	{
+		name: 'vsource',
+		category: 'voltage source',
+		image: vsource
 	}
 ];
