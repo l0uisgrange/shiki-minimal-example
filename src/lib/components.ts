@@ -8,6 +8,8 @@ import led from './images/led.svg';
 import dcmotor from './images/dcmotor.svg';
 import ground from './images/ground.svg';
 import earth from './images/earth.svg';
+import bjt from './images/bjt.svg';
+import mosfet from './images/mosfet.svg';
 
 export interface Component {
 	name: string;
@@ -65,5 +67,15 @@ export const components: Component[] = [
 		name: 'earth',
 		category: 'earth',
 		image: earth
+	},
+	{
+		name: 'bjt',
+		category: 'bipolar junction transistor',
+		image: bjt
+	},
+	{
+		name: 'mosfet',
+		category: 'field-effect transistor',
+		image: mosfet
 	}
 ];
