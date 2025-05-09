@@ -26,7 +26,7 @@
 	<title>Getting started</title>
 </svelte:head>
 
-<div class="flex items-start">
+<div class="flex items-stretch">
 	<main class="min-h-dvh p-5 pt-10 md:px-8 md:py-10">
 		<h1>Positioning</h1>
 		<p class="max-w-2xl text-lg">
@@ -121,8 +121,8 @@
 			>
 		</p>
 	</main>
-	<div class="relative hidden h-full w-72 flex-none p-5 md:block">
-		<ul class="sticky top-20">
+	<div class="relative hidden w-72 flex-none p-5 md:block">
+		<ul class="sticky top-32 block">
 			{#each headings as heading}
 				<li style="margin-left: {heading.level * 10}px;">
 					<NavButton href={`#${heading.uid}`}>
