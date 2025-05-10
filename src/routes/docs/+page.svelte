@@ -24,8 +24,8 @@
 	<title>Getting started</title>
 </svelte:head>
 
-<div class="flex items-stretch">
-	<main class="min-h-dvh p-5 pt-10 md:px-8 md:py-10">
+<div class="md:flex md:items-stretch">
+	<main class="min-h-dvh flex-auto p-5 pt-10 md:px-8 md:py-10">
 		<h1>Getting started</h1>
 		<p class="max-w-2xl text-lg">
 			Circuitor is easy to set up and works out of the box with <a
@@ -54,7 +54,7 @@
 		<a
 			target="_blank"
 			href="https://packages.typst.org/preview/circuitor-0.1.0.tar.gz"
-			class="dark:border-neutral-border flex max-w-max items-center gap-2 rounded-full border border-neutral-200 px-5 py-2! font-medium text-current! decoration-0 transition hover:border-black"
+			class="dark:border-neutral-border flex max-w-max items-center gap-2 rounded-full border border-neutral-200 px-5 py-2! font-medium text-current! decoration-0 transition hover:border-black dark:hover:border-white"
 		>
 			<span class="icon-[hugeicons--download-02] size-5.5"></span>
 			Download
@@ -91,7 +91,7 @@
 			simple circuit with just a few lines of code.
 		</p>
 		<Code
-			content={'#import "@preview/circuitor:0.1.0"\n' +
+			content={'#import "@preview/circuitor:0.1.0" fiwuehfui fhuwhf uiweh fuiwehf iuweh\n' +
 				'\n' +
 				'#circuitor.canvas({\n' +
 				'    import circuitor: *\n' +
@@ -100,7 +100,7 @@
 				'})'}
 		/>
 	</main>
-	<div class="relative hidden w-72 flex-none p-5 md:block">
+	<div class="relative hidden flex-none p-5 md:block md:w-72">
 		<ul class="sticky top-32 block">
 			{#each headings as heading}
 				<li style="margin-left: {heading.level * 10}px;">

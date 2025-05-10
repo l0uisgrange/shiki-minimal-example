@@ -25,6 +25,8 @@
 	});
 </script>
 
-<div class="mb-2 overflow-x-scroll bg-neutral-100 px-4 py-3 antialiased dark:bg-neutral-800">
+<div
+	class="mb-2 block w-full max-w-full overflow-x-auto bg-neutral-100 px-4 py-3 antialiased dark:bg-neutral-800"
+>
 	{@html code}
 </div>

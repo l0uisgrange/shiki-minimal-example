@@ -26,7 +26,7 @@
 	<title>Getting started</title>
 </svelte:head>
 
-<div class="flex items-stretch">
+<div class="items-stretch md:flex">
 	<main class="min-h-dvh p-5 pt-10 md:px-8 md:py-10">
 		<h1>Positioning</h1>
 		<p class="max-w-2xl text-lg">

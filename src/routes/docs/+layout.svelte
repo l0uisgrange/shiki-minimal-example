@@ -5,7 +5,7 @@
 	let { children } = $props();
 </script>
 
-<div class="relative flex max-w-screen">
+<div class="relative md:flex">
 	<div
 		class="dark:border-neutral-border sticky top-32 left-0 hidden min-h-full w-72 flex-none space-y-1 border-r border-neutral-200 p-5 font-medium md:block"
 	>

@@ -10,7 +10,7 @@
 	<title>Components</title>
 </svelte:head>
 
-<div class="flex items-start">
+<div class="items-start md:flex">
 	<main class="min-h-dvh p-5 pt-10 md:px-8 md:py-10">
 		<h1>Components</h1>
 		<p class="max-w-2xl text-lg">

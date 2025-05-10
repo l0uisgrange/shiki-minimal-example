@@ -13,11 +13,12 @@
 		Explore the examples below to see Circuitor's advanced capabilities in action and discover
 		just how easy it is to program complex circuit diagrams.
 	</p>
-	<div class="mt-14 grid gap-7 md:grid-cols-2">
+	<h2>Simple example</h2>
+	<div class="grid gap-7 md:grid-cols-2">
 		<div
-			class="dark:border-neutral-border flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 bg-white"
+			class="dark:border-neutral-border flex items-center justify-center overflow-scroll rounded-lg border border-neutral-200 bg-white"
 		>
-			<img src={example1} alt="example1" />
+			<img src={example1} alt="example1" class="p-10" />
 		</div>
 		<Code
 			content={'#circuitor.canvas({\n' +
