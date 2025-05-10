@@ -33,28 +33,38 @@
 				href="https://typst.app/universe">Typst Universe</a
 			>. There are two main ways to start using the library, depending on your workflow.
 		</p>
+		<Notice type="danger" title="Upcoming Typst release">
+			Circuitor will be released in Typst Universe on <span class="font-medium"
+				>May 15th, 2025</span
+			>.<br /> Until then, it is only available by cloning the
+			<a target="_blank" href="https://github.com/l0uisgrange/circuitor">GitHub repository</a
+			>.
+		</Notice>
 		<h2>Typst Universe</h2>
 		<p>
 			If you're working in the online Typst app, you can import Circuitor directly with a
 			single line.
 		</p>
-		<Notice type="info" title="Information">
-			Circuitor will be released in Typst Universe around <span class="font-medium"
-				>May 15th, 2025</span
-			>
-		</Notice>
 		<Code content={'#import "@preview/circuitor:0.1.0"'} />
 		<h2 class="mt-3">Local package</h2>
-		<p>
+		<p class="mb-4!">
 			If you prefer to work offline or want to explore the source code, you can also use
-			Circuitor by downloading it locally from the <a
-				target="_blank"
-				href="https://github.com/l0uisgrange/circuitor">GitHub repository</a
-			>.
+			Circuitor by downloading it locally from Typst Universe registry.
 		</p>
-		<ul class="ms-7 list-outside list-decimal">
+		<a
+			target="_blank"
+			href="https://packages.typst.org/preview/circuitor-0.1.0.tar.gz"
+			class="dark:border-neutral-border flex max-w-max items-center gap-2 rounded-full border border-neutral-200 px-5 py-2! font-medium text-black! decoration-0 transition hover:border-black"
+		>
+			<span class="icon-[hugeicons--download-02] size-5.5"></span>
+			Download
+		</a>
+		<ul class="ms-7 mt-4 list-outside list-decimal">
 			<li>Clone or download the repository to your computer.</li>
-			<li>In your Typst project, import the exports.typ file located in the src folder:</li>
+			<li>
+				In your Typst project, import the <span class="font-mono">exports.typ</span> file located
+				in the src folder:
+			</li>
 		</ul>
 		<Code content={'#import "PATH_TO_CIRCUITOR/src/exports.typ"'} />
 		<p>

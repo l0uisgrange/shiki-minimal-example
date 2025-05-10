@@ -15,7 +15,7 @@
 		<h1>Components</h1>
 		<p class="max-w-2xl text-lg">
 			The package offers a wide range of standardized electronic component symbols according
-			to IEC 60617 and IEEE/ANSI 315-1975 standards.
+			to international standards.
 		</p>
 		<h2>Components list</h2>
 		<Notice title="Component suggestion"
