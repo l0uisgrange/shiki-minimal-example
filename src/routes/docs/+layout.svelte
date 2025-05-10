@@ -3,11 +3,21 @@
 	import { page } from '$app/state';
 
 	let { children } = $props();
+
+	let menuopen = $state(false);
 </script>
 
+<button
+	onclick={() => (menuopen = !menuopen)}
+	class="dark:border-neutral-border flex w-full cursor-pointer items-center justify-between border-b border-neutral-200 px-5 py-2.5 md:hidden"
+>
+	Menu
+	<span class="icon-[hugeicons--arrow-down-01] size-6"></span>
+</button>
 <div class="relative md:flex">
 	<div
-		class="dark:border-neutral-border sticky top-32 left-0 hidden min-h-full w-72 flex-none space-y-1 border-r border-neutral-200 p-5 font-medium md:block"
+		class="dark:border-neutral-border {!menuopen &&
+			'hidden'} top-32 left-0 flex-none space-y-1 border-r-0 border-b border-neutral-200 p-5 font-medium md:sticky md:block md:min-h-full md:w-72 md:border-r md:border-b-0"
 	>
 		<NavButton href="/circuitor/docs" active={page.url.pathname === '/circuitor/docs'}
 			>Get started</NavButton

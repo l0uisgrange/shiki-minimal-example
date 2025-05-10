@@ -6,8 +6,6 @@
 	import githublight from '$lib/github-light.svg';
 
 	let { children } = $props();
-
-	let menuopen = $state(false);
 </script>
 
 <div
@@ -36,16 +34,6 @@
 		</a>
 	</div>
 </div>
-<button
-	onclick={() => (menuopen = true)}
-	class="dark:border-neutral-border flex w-full cursor-pointer items-center justify-between border-b border-neutral-200 px-5 py-2.5 md:hidden"
->
-	Menu
-	<span class="icon-[hugeicons--arrow-down-01] size-6"></span>
-</button>
-{#if menuopen}
-	<div class="fixed top-0 left-0 size-full bg-zinc-950"></div>
-{/if}
 {@render children()}
 <div
 	class="dark:border-neutral-border flex flex-col border-t border-neutral-200 px-5 py-5 md:flex-row md:items-center md:justify-between"
