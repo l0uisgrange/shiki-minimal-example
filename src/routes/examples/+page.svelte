@@ -7,7 +7,7 @@
 	<title>Getting started</title>
 </svelte:head>
 
-<main class="block p-5 pt-10">
+<main class="block p-5 py-10">
 	<h1>Examples</h1>
 	<p class="max-w-2xl text-lg">
 		Explore the examples below to see Circuitor's advanced capabilities in action and discover
@@ -15,7 +15,7 @@
 	</p>
 	<div class="mt-14 grid gap-7 md:grid-cols-2">
 		<div
-			class="dark:border-neutral-border flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200"
+			class="dark:border-neutral-border flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 bg-white"
 		>
 			<img src={example1} alt="example1" />
 		</div>

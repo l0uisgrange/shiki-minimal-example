@@ -54,7 +54,7 @@
 		<a
 			target="_blank"
 			href="https://packages.typst.org/preview/circuitor-0.1.0.tar.gz"
-			class="dark:border-neutral-border flex max-w-max items-center gap-2 rounded-full border border-neutral-200 px-5 py-2! font-medium text-black! decoration-0 transition hover:border-black"
+			class="dark:border-neutral-border flex max-w-max items-center gap-2 rounded-full border border-neutral-200 px-5 py-2! font-medium text-current! decoration-0 transition hover:border-black"
 		>
 			<span class="icon-[hugeicons--download-02] size-5.5"></span>
 			Download

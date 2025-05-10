@@ -12,7 +12,7 @@
 >
 	<span class="max-w-3xl text-4xl font-bold font-stretch-expanded md:text-7xl">
 		Your <svg
-			class="text-typst -mb-3 inline h-14 w-auto md:h-20"
+			class="text-typst -mb-3 inline h-10 w-auto md:h-20"
 			xmlns="http://www.w3.org/2000/svg"
 			width="91"
 			height="35"
@@ -64,7 +64,9 @@
 <div
 	class="flex-col items-center justify-center bg-neutral-900 px-5 pb-20 text-center text-white md:pb-32"
 >
-	<h1>Forget about circuitikz, we're in 2025</h1>
+	<h1>
+		Forget about <span class="line-through decoration-red-600">circuitikz</span>, we're in 2025
+	</h1>
 	<div
 		class="mx-auto mt-20 grid max-w-7xl gap-10 text-left *:rounded-xl *:bg-white/10 *:p-5 lg:grid-cols-3"
 	>

@@ -43,7 +43,7 @@
 		></span>
 		{#if searchQuery.trim()}
 			<button
-				class="absolute top-1/2 right-2 -translate-y-1/2 cursor-pointer rounded-full bg-neutral-800 px-3 py-1 text-xs text-white"
+				class="absolute top-1/2 right-2 -translate-y-1/2 cursor-pointer rounded-full bg-neutral-800 px-3 py-1 text-xs text-white dark:bg-white dark:text-black"
 				onclick={() => (searchQuery = '')}
 			>
 				cancel
