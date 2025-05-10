@@ -91,7 +91,7 @@
 			simple circuit with just a few lines of code.
 		</p>
 		<Code
-			content={'#import "@preview/circuitor:0.1.0" fiwuehfui fhuwhf uiweh fuiwehf iuweh\n' +
+			content={'#import "@preview/circuitor:0.1.0"\n' +
 				'\n' +
 				'#circuitor.canvas({\n' +
 				'    import circuitor: *\n' +

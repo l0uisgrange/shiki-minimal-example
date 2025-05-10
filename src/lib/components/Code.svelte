@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { createHighlighter } from 'shiki';
+	import { createHighlighter, type Highlighter } from 'shiki';
 	import { onMount } from 'svelte';
 
 	let { content, language = 'typst' } = $props();
 
-	let code: string = $state('');
+	let highlighter: Highlighter | undefined = $state(undefined);
 	let isDarkMode = $state(false);
 
 	onMount(async () => {
@@ -13,15 +13,18 @@
 		darkModeQuery.addEventListener('change', (event) => {
 			isDarkMode = event.matches;
 		});
-		const highlighter = await createHighlighter({
+		highlighter = await createHighlighter({
 			themes: ['github-light-default', 'github-dark-default'],
 			langs: ['typst']
 		});
-		code = highlighter.codeToHtml(content.toString(), {
+	});
+
+	const code = $derived.by(() => {
+		if (!highlighter) return '';
+		return highlighter.codeToHtml(content.toString(), {
 			theme: isDarkMode ? 'github-dark-default' : 'github-light-default',
 			lang: language
 		});
-		return highlighter.dispose();
 	});
 </script>
 
