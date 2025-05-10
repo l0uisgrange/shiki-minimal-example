@@ -45,7 +45,7 @@
 				>
 					<img src={onenode} class="w-full" alt="resistor using one-node placement" />
 				</div>
-				<Code content={'#canvas({\n' + '    resistor("r1", (0,0))\n' + '})'} />
+				<Code content={'#circuitor.canvas({\n' + '    resistor("r1", (0,0))\n' + '})'} />
 			</div>
 			<div>
 				<div
@@ -53,7 +53,9 @@
 				>
 					<img src={twonode} class="w-full" alt="resistor using one-node placement" />
 				</div>
-				<Code content={'#canvas({\n' + '    resistor("r1", (0,0), (5,0))\n' + '})'} />
+				<Code
+					content={'#circuitor.canvas({\n' + '    resistor("r1", (0,0), (5,0))\n' + '})'}
+				/>
 			</div>
 		</div>
 		<Notice type="warning" title="Warning">
@@ -82,13 +84,13 @@
 			The name provided as the first argument acts as an identifier for the component, as
 			shown below.
 		</p>
-		<Code content={'#canvas({\n' + '    resistor("r1", (0,0), (5,0))\n' + '})'} />
+		<Code content={'#circuitor.canvas({\n' + '    resistor("r1", (0,0), (5,0))\n' + '})'} />
 		<p>
 			Now that this resistor is identified by its name <span class="font-mono">r1</span>, we
 			can attach a voltage source to one of it's nodes like this.
 		</p>
 		<Code
-			content={'#canvas({\n' +
+			content={'#circuitor.canvas({\n' +
 				'    resistor("r1", (0,0), (5,0))\n' +
 				'    vsource("v1", "r1.out", (5,5))\n' +
 				'})'}

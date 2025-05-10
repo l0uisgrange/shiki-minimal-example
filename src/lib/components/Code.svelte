@@ -21,6 +21,7 @@
 			theme: isDarkMode ? 'github-dark-default' : 'github-light-default',
 			lang: language
 		});
+		return highlighter.dispose();
 	});
 </script>
 

@@ -60,13 +60,14 @@
 			Download
 		</a>
 		<ul class="ms-7 mt-4 list-outside list-decimal">
-			<li>Clone or download the repository to your computer.</li>
+			<li>Download the package to your computer.</li>
+			<li>Uncompress it</li>
 			<li>
-				In your Typst project, import the <span class="font-mono">exports.typ</span> file located
+				In your Typst project, import the <span class="font-mono">lib.typ</span> file located
 				in the src folder:
 			</li>
 		</ul>
-		<Code content={'#import "PATH_TO_CIRCUITOR/src/exports.typ"'} />
+		<Code content={'#import "PATH_TO_CIRCUITOR/src/lib.typ"'} />
 		<p>
 			Make sure the path reflects the actual location of the downloaded folder relative to
 			your .typ file.
@@ -90,10 +91,12 @@
 			simple circuit with just a few lines of code.
 		</p>
 		<Code
-			content={'#import "@preview/circuitor:0.1.0"\n\n' +
-				'#canvas({\n' +
-				'  import circuitor: *\n' +
-				'  ...\n' +
+			content={'#import "@preview/circuitor:0.1.0"\n' +
+				'\n' +
+				'#circuitor.canvas({\n' +
+				'    import circuitor: *\n' +
+				'\n' +
+				'    // Your amazing circuit\n' +
 				'})'}
 		/>
 	</main>
