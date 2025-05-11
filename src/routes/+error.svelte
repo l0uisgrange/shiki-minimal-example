@@ -2,7 +2,7 @@
 	<span class="mb-6 font-mono text-7xl text-blue-600 antialiased">404</span>
 	<h1>Not found</h1>
 	<a
-		href="/circuitor"
+		href="/zap"
 		class="rounded-full bg-neutral-900 px-5 py-2 font-medium text-white transition hover:bg-neutral-900/80"
 	>
 		Homepage

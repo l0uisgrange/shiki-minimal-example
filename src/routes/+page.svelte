@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>Circuitor – Your Typst Circuit Drawing Companion</title>
+	<title>Zap – Your Typst Circuit Drawing Companion</title>
 </svelte:head>
 
 <div
@@ -44,13 +44,13 @@
 	</span>
 	<div class="mt-8 flex items-center gap-3">
 		<a
-			href="/circuitor/docs"
+			href="/zap/docs"
 			class="flex items-center gap-2 rounded-full bg-white px-5 py-2 font-medium text-neutral-900 transition hover:bg-white/80"
 		>
 			<span class="icon-[hugeicons--book-open-02] size-5.5"></span> Documentation
 		</a>
 		<a
-			href="/circuitor/examples"
+			href="/zap/examples"
 			class="rounded-full bg-black/50 px-5 py-2.5 font-medium text-white transition hover:bg-black/70"
 		>
 			Examples
@@ -73,24 +73,24 @@
 			<span class="icon-[hugeicons--book-bookmark-02] mb-5 size-7"></span>
 			<h2 class="mt-0!">Standard</h2>
 			<p>
-				Circuitor follows standard symbol conventions for clear, accurate diagrams
-				recognized by engineers and students.
+				Zap follows standard symbol conventions for clear, accurate diagrams recognized by
+				engineers and students.
 			</p>
 		</div>
 		<div>
 			<span class="icon-[hugeicons--acute] mb-5 size-7"></span>
 			<h2 class="mt-0!">Intuitive</h2>
 			<p>
-				With its intuitive syntax, Circuitor makes drawing circuits simple, even for
-				beginners. Focus on your design.
+				With its intuitive syntax, Zap makes drawing circuits simple, even for beginners.
+				Focus on your design.
 			</p>
 		</div>
 		<div>
 			<span class="icon-[hugeicons--pencil-edit-02] mb-5 size-7"></span>
 			<h2 class="mt-0!">CeTZ compatible</h2>
 			<p>
-				Compatible with CeTZ, Circuitor lets you use Typst's rich ecosystem for extended
-				drawing possibilities.
+				Compatible with CeTZ, Zap lets you use Typst's rich ecosystem for extended drawing
+				possibilities.
 			</p>
 		</div>
 	</div>

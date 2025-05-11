@@ -20,17 +20,16 @@
 		class="dark:border-neutral-border {!menuopen &&
 			'hidden'} top-32 left-0 flex-none space-y-1 border-r-0 border-b border-neutral-200 p-5 font-medium md:sticky md:block md:min-h-full md:w-72 md:border-r md:border-b-0"
 	>
-		<NavButton href="/circuitor/docs" active={page.url.pathname === '/circuitor/docs'}
+		<NavButton href="/zap/docs" active={page.url.pathname === '/zap/docs'}
 			>Get started</NavButton
 		>
 		<NavButton
-			href="/circuitor/docs/positioning"
-			active={page.url.pathname === '/circuitor/docs/positioning'}>Positioning</NavButton
+			href="/zap/docs/positioning"
+			active={page.url.pathname === '/zap/docs/positioning'}>Positioning</NavButton
 		>
 		<NavButton
-			href="/circuitor/docs/components"
-			active={page.url.pathname.startsWith('/circuitor/docs/components')}
-			>Components</NavButton
+			href="/zap/docs/components"
+			active={page.url.pathname.startsWith('/zap/docs/components')}>Components</NavButton
 		>
 	</div>
 	<article class="flex-auto">

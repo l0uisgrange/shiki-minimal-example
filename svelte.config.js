@@ -13,7 +13,7 @@ const config = {
 			precompress: false
 		}),
 		paths: {
-			base: '/circuitor'
+			base: '/zap'
 		}
 	}
 };

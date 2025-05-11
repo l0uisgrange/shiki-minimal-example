@@ -27,7 +27,7 @@
 		<div class="mt-4 grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-4">
 			{#each results as component}
 				<a
-					href="/circuitor/docs/components/"
+					href="/zap/docs/components/"
 					class="dark:border-neutral-border group overflow-hidden rounded-lg border border-neutral-200 text-current! decoration-0! hover:shadow-xs"
 				>
 					<img

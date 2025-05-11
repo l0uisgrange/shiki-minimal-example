@@ -30,8 +30,8 @@
 	<main class="min-h-dvh p-5 pt-10 md:px-8 md:py-10">
 		<h1>Positioning</h1>
 		<p class="max-w-2xl text-lg">
-			Circuitor simplifies component positioning through CeTZ, providing two methods for
-			placing your circuit elements.
+			Zap simplifies component positioning through CeTZ, providing two methods for placing
+			your circuit elements.
 		</p>
 		<h2>Component placement</h2>
 		<p>
@@ -45,7 +45,7 @@
 				>
 					<img src={onenode} class="w-full" alt="resistor using one-node placement" />
 				</div>
-				<Code content={'#circuitor.canvas({\n' + '    resistor("r1", (0,0))\n' + '})'} />
+				<Code content={'#zap.canvas({\n' + '    resistor("r1", (0,0))\n' + '})'} />
 			</div>
 			<div>
 				<div
@@ -53,9 +53,7 @@
 				>
 					<img src={twonode} class="w-full" alt="resistor using one-node placement" />
 				</div>
-				<Code
-					content={'#circuitor.canvas({\n' + '    resistor("r1", (0,0), (5,0))\n' + '})'}
-				/>
+				<Code content={'#zap.canvas({\n' + '    resistor("r1", (0,0), (5,0))\n' + '})'} />
 			</div>
 		</div>
 		<Notice type="warning" title="Warning">
@@ -84,20 +82,20 @@
 			The name provided as the first argument acts as an identifier for the component, as
 			shown below.
 		</p>
-		<Code content={'#circuitor.canvas({\n' + '    resistor("r1", (0,0), (5,0))\n' + '})'} />
+		<Code content={'#zap.canvas({\n' + '    resistor("r1", (0,0), (5,0))\n' + '})'} />
 		<p>
 			Now that this resistor is identified by its name <span class="font-mono">r1</span>, we
 			can attach a voltage source to one of it's nodes like this.
 		</p>
 		<Code
-			content={'#circuitor.canvas({\n' +
+			content={'#zap.canvas({\n' +
 				'    resistor("r1", (0,0), (5,0))\n' +
 				'    vsource("v1", "r1.out", (5,5))\n' +
 				'})'}
 		/>
 		<p>
 			The only slightly tricky part is knowing which sub-anchors each component provides, but
-			don't worry, you can always refer to the <a href="/circuitor/docs/components/"
+			don't worry, you can always refer to the <a href="/zap/docs/components/"
 				>components list</a
 			> for a complete overview of available anchors.
 		</p>

@@ -10,8 +10,8 @@
 <main class="block p-5 py-10">
 	<h1>Examples</h1>
 	<p class="max-w-2xl text-lg">
-		Explore the examples below to see Circuitor's advanced capabilities in action and discover
-		just how easy it is to program complex circuit diagrams.
+		Explore the examples below to see Zap's advanced capabilities in action and discover just
+		how easy it is to program complex circuit diagrams.
 	</p>
 	<h2>Simple example</h2>
 	<div class="grid gap-7 md:grid-cols-2">
@@ -21,8 +21,8 @@
 			<img src={example1} alt="example1" class="p-10" />
 		</div>
 		<Code
-			content={'#circuitor.canvas({\n' +
-				'    import circuitor: *\n' +
+			content={'#zap.canvas({\n' +
+				'    import zap: *\n' +
 				'\n' +
 				'    // Branch 1\n' +
 				'    resistor("r1", (0,3), (3,3), label: $3 Omega$)\n' +
