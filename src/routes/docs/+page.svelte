@@ -1,8 +1,9 @@
 <script lang="ts">
 	import Code from '$lib/components/Code.svelte';
-	import { Notice } from '$lib';
+	import { Notice, version } from '$lib';
 	import { onMount } from 'svelte';
 	import NavButton from '$lib/components/NavButton.svelte';
+	import NexPrev from '$lib/components/NexPrev.svelte';
 
 	let headings: any[] = $state([]);
 
@@ -33,18 +34,32 @@
 				href="https://typst.app/universe">Typst Universe</a
 			> registry.
 		</p>
-		<Notice type="danger" title="Upcoming Typst release">
-			Zap will be released in Typst Universe on <span class="font-medium">May 15th, 2025</span
-			>.<br /> Until then, it is only available by cloning the
-			<a target="_blank" href="https://github.com/l0uisgrange/zap">GitHub repository</a>.
-		</Notice>
 		<h2>Installation</h2>
 		<p>
 			Whether you're using the Typst online app or running Typst locally on your computer, you
 			can start using Zap by adding the following line at the top of your Typst file.
 		</p>
-		<Code content={'#import "@preview/zap:0.1.0"'} />
-		<h2>Report bugs</h2>
+		<Code content={`#import "@preview/zap:${version}"`} />
+		<h2>Create your first circuit</h2>
+		<p>
+			To get started with Zap, here's a minimal working example showing how to draw a simple
+			circuit with just a few lines of code.
+		</p>
+		<Notice type="tip" title="Tip"
+			>It is recommended to import Zap components <span class="font-medium"
+				>inside your canvas</span
+			>, as some Zap functions override some basic Typst elements.</Notice
+		>
+		<Code
+			content={`#import "@preview/zap:${version}"\n` +
+				'\n' +
+				'#zap.canvas({\n' +
+				'    import zap: *\n' +
+				'\n' +
+				'    // Your amazing circuit\n' +
+				'})'}
+		/>
+		<h2>Contribute</h2>
 		<p>I actively maintain Zap and greatly value community feedback.</p>
 		<p>
 			If you encounter a bug, spot an incorrect symbol, or have an idea for a new feature or
@@ -57,24 +72,32 @@
 				>discussion</a
 			> on the GitHub repository.
 		</p>
-		<h2>Create your first circuit</h2>
-		<p>
-			To get started with Zap, here's a minimal working example showing how to draw a simple
-			circuit with just a few lines of code.
-		</p>
-		<Notice type="tip" title="Tip"
-			>It is recommended to import Zap components inside your canvas, as some Zap functions
-			override some basic Typst elements.</Notice
+		<div
+			class="dark:*:border-neutral-border mt-5 grid gap-4 *:flex *:items-center *:gap-2 *:rounded-lg *:border *:border-neutral-200 *:p-4 *:transition *:hover:bg-gray-50 *:hover:shadow-xs md:grid-cols-3 dark:*:hover:bg-neutral-800 dark:*:hover:shadow-black"
 		>
-		<Code
-			content={'#import "@preview/zap:0.1.0"\n' +
-				'\n' +
-				'#zap.canvas({\n' +
-				'    import zap: *\n' +
-				'\n' +
-				'    // Your amazing circuit\n' +
-				'})'}
-		/>
+			<a
+				target="_blank"
+				href="https://github.com/l0uisgrange/zap/issues/new?template=new_component.yml"
+			>
+				<span class="icon-[hugeicons--compass-01] size-6 text-blue-600"></span>
+				<span class="text-black decoration-0 dark:text-white">Request a component</span>
+			</a>
+			<a
+				target="_blank"
+				href="https://github.com/l0uisgrange/zap/issues/new?template=bug_report.yml"
+			>
+				<span class="icon-[hugeicons--bug-02] size-6 text-red-600"></span>
+				<span class="text-black decoration-0 dark:text-white">Report bug or error</span>
+			</a>
+			<a
+				target="_blank"
+				href="https://github.com/l0uisgrange/zap/issues/new?template=feature_request.yml"
+			>
+				<span class="icon-[hugeicons--bulb] size-6 text-green-600"></span>
+				<span class="text-black decoration-0 dark:text-white">Suggest a feature</span>
+			</a>
+		</div>
+		<NexPrev next={{ href: '/zap/docs/basics', title: 'Basics' }} />
 	</main>
 	<div class="relative hidden flex-none p-5 md:block md:w-72">
 		<ul class="sticky top-32 block">

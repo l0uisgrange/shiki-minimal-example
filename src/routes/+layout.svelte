@@ -4,6 +4,7 @@
 	import typst from '$lib/typst.svg';
 	import typstlight from '$lib/typst-light.svg';
 	import githublight from '$lib/github-light.svg';
+	import { version } from '$lib';
 
 	let { children } = $props();
 </script>
@@ -13,7 +14,7 @@
 >
 	<div class="mx-auto flex items-center justify-between gap-5 px-5 py-2.5">
 		<a href="/zap" class="text-lg font-medium">Zap</a>
-		<span class="font-mono text-gray-500 antialiased">v0.1.0</span>
+		<span class="font-mono text-gray-500 antialiased">v{version}</span>
 		<a href="/zap/docs" class="ml-auto hidden md:block">Documentation</a>
 		<a href="/zap/examples" class="hidden md:block">Examples</a>
 		<a

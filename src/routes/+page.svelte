@@ -7,7 +7,7 @@
 </svelte:head>
 
 <div
-	class="flex w-screen flex-col items-center bg-gradient-to-b from-neutral-900/92 to-neutral-900 py-14 text-center text-white md:min-h-screen md:justify-center md:py-20"
+	class="flex w-screen flex-col items-center bg-gradient-to-b from-neutral-900/98 to-neutral-900 py-14 text-center text-white md:min-h-screen md:justify-center md:py-20"
 >
 	<span class="max-w-3xl text-4xl font-bold font-stretch-expanded md:text-7xl">
 		Your <svg

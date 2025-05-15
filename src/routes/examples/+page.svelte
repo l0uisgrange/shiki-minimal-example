@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Code from '$lib/components/Code.svelte';
 	import example1 from '$lib/examples/example1.svg';
+	import example2 from '$lib/examples/example2.svg';
 </script>
 
 <svelte:head>
@@ -36,6 +37,36 @@
 				'\n' +
 				'    // Wiring\n' +
 				'    wire("r2.out", "r3.out")\n' +
+				'})'}
+		/>
+	</div>
+	<h2>Wheatstone bridge</h2>
+	<div class="grid gap-7 md:grid-cols-2">
+		<div
+			class="dark:border-neutral-border flex items-center justify-center overflow-scroll rounded-lg border border-neutral-200 bg-white"
+		>
+			<img src={example2} alt="example2" class="p-10" />
+		</div>
+		<Code
+			content={'#zap.canvas({\n' +
+				'    import zap: *\n' +
+				'\n' +
+				'    // Wheatstone bridge\n' +
+				'    resistor("r1", (4,0), (6,2), label: "R1", adjustable: true)\n' +
+				'    resistor("r2", (6,2), (4,4), label: "R2", label-angle: 180deg)\n' +
+				'    resistor("r3", (4,0), (2,2), label: "R3")\n' +
+				'    resistor("r4", (2,2), (4,4), label: "R4", label-angle: -180deg)\n' +
+				'\n' +
+				'    // Voltage source\n' +
+				'    vsource("v1", (0,0), (0,4), label: "3V")\n' +
+				'\n' +
+				'    // Capacitor & motor\n' +
+				'    capacitor("c1", "r2.out", (8,4), label: "C1")\n' +
+				'    dcmotor("m1", "c1.out", (rel: (0,-4)))\n' +
+				'\n' +
+				'    // Wiring\n' +
+				'    wire("v1.minus", "m1.out")\n' +
+				'    wire("v1.plus", "r4.out")\n' +
 				'})'}
 		/>
 	</div>

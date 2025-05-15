@@ -23,10 +23,17 @@
 		<NavButton href="/zap/docs" active={page.url.pathname === '/zap/docs'}
 			>Get started</NavButton
 		>
+		<NavButton href="/zap/docs/basics" active={page.url.pathname === '/zap/docs/basics'}
+			>Basics</NavButton
+		>
 		<NavButton
 			href="/zap/docs/positioning"
 			active={page.url.pathname === '/zap/docs/positioning'}>Positioning</NavButton
 		>
+		<NavButton href="/zap/docs/styling" active={page.url.pathname === '/zap/docs/styling'}
+			>Styling</NavButton
+		>
+		<div class="h-6"></div>
 		<NavButton
 			href="/zap/docs/components"
 			active={page.url.pathname.startsWith('/zap/docs/components')}>Components</NavButton

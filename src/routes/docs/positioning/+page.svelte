@@ -5,6 +5,7 @@
 	import { onMount } from 'svelte';
 	import NavButton from '$lib/components/NavButton.svelte';
 	import { Notice } from '$lib';
+	import NexPrev from '$lib/components/NexPrev.svelte';
 
 	let headings: any[] = $state([]);
 
@@ -23,7 +24,7 @@
 </script>
 
 <svelte:head>
-	<title>Getting started</title>
+	<title>Positioning</title>
 </svelte:head>
 
 <div class="items-stretch md:flex">
@@ -120,6 +121,10 @@
 				>CeTZ documentation</a
 			>
 		</p>
+		<NexPrev
+			next={{ href: '/zap/docs/styling', title: 'Styling' }}
+			previous={{ href: '/zap/docs/basics', title: 'Basics' }}
+		/>
 	</main>
 	<div class="relative hidden w-72 flex-none p-5 md:block">
 		<ul class="sticky top-32 block">
