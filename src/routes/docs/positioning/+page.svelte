@@ -69,9 +69,9 @@
 				href="https://typst.app/docs/reference/foundations/array/"
 				target="_blank">Typst array</a
 			>
-			with two dimensions (<span class="font-mono">x</span> representing the horizontal
-			position, and
-			<span class="font-mono">y</span> the vertical).
+			with two dimensions (<span class="text-float font-mono">x</span> representing the
+			horizontal position, and
+			<span class="text-float font-mono">y</span> the vertical).
 		</p>
 		<Code content={'#let myCoordinate = (0, 0)'} />
 		<h2 class="mt-3">Named anchors</h2>
@@ -85,8 +85,9 @@
 		</p>
 		<Code content={'#zap.canvas({\n' + '    resistor("r1", (0,0), (5,0))\n' + '})'} />
 		<p>
-			Now that this resistor is identified by its name <span class="font-mono">r1</span>, we
-			can attach a voltage source to one of it's nodes like this.
+			Now that this resistor is identified by its name <span class="text-string font-mono"
+				>r1</span
+			>, we can attach a voltage source to one of it's nodes like this.
 		</p>
 		<Code
 			content={'#zap.canvas({\n' +
@@ -102,10 +103,10 @@
 		</p>
 		<p>
 			In most cases, especially with two-node components, you'll typically use <span
-				class="font-mono">in</span
+				class="text-string font-mono">in</span
 			>
 			and
-			<span class="font-mono">out</span>.
+			<span class="text-string font-mono">out</span>.
 		</p>
 		<h2 class="mt-3">Relative coordinates</h2>
 		<p>

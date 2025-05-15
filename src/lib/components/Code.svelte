@@ -15,7 +15,7 @@
 		});
 		highlighter = await createHighlighter({
 			themes: ['github-light-default', 'github-dark-default'],
-			langs: ['typst']
+			langs: ['typst', 'latex']
 		});
 	});
 

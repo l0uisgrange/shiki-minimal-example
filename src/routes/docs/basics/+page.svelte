@@ -2,6 +2,9 @@
 	import { onMount } from 'svelte';
 	import NavButton from '$lib/components/NavButton.svelte';
 	import NexPrev from '$lib/components/NexPrev.svelte';
+	import Code from '$lib/components/Code.svelte';
+	import { version } from '$lib';
+	import CodeSwitcher from '$lib/components/CodeSwitcher.svelte'; // Added Code component
 
 	let headings: any[] = $state([]);
 
@@ -27,14 +30,63 @@
 	<main class="min-h-dvh p-5 pt-10 md:px-8 md:py-10">
 		<h1>Basics</h1>
 		<p class="max-w-2xl text-lg">
-			Zap simplifies component positioning through CeTZ, providing two methods for placing
-			your circuit elements.
+			Before diving into the complexity, it is necessary to explore some fundamental concepts
+			from Zap, which will help you start very easily.
 		</p>
-		<h2>Component placement</h2>
+
+		<h2>Canvas</h2>
 		<p>
-			To position components within your circuit, you can choose to either attach them to a
-			single node, or place them between two nodes with automatic wiring.
+			All diagrams drawn must be contained within a <span class="text-component font-mono"
+				>canvas</span
+			> block. This block initializes the necessary drawing environment, managed by CeTZ, and allows
+			you to place your components.
 		</p>
+		<Code
+			content={`#import "@preview/zap:${version}"\n\n#zap.canvas({\n    import zap: *\n\n    resistor("r1", (0,0), (3,0), label: $R_1$)\n})`}
+		/>
+
+		<h2>Declaration</h2>
+		<p>
+			After you set up your canvas, you'll start adding different items called components. You
+			add these components by using their own special functions.
+		</p>
+		<div
+			class="mb-2 flex flex-wrap items-center justify-center gap-1 px-4 py-4 font-mono text-sm *:rounded-full *:px-3 *:py-1 *:font-light"
+		>
+			<div class="bg-component/10 text-component">component</div>
+			(
+			<div class="bg-string/10 text-string">"name"</div>
+			,
+			<div class="bg-float/10">
+				(<span class="text-float">0</span>,<span class="text-float">0</span>)
+			</div>
+			,
+			<div class="bg-float/10">
+				(<span class="text-float">0</span>,<span class="text-float">0</span>)
+			</div>
+			,
+			<div class="bg-params/10">
+				<span class="text-params">..params</span>
+			</div>
+			)
+		</div>
+		<p>
+			You choose the type of <span class="text-component font-mono">component</span> you need
+			from the
+			<a href="/zap/docs/components">full list</a>. Giving your component a
+			<span class="text-string font-mono">name</span> is important as it lets you easily find and
+			use this component later when you're building more of your circuit, and it helps you connect
+			to its 'anchors' (connection points). We'll explain more about anchors next.
+		</p>
+		<p>
+			The <span class="text-params font-mono">params</span> are settings that let you change
+			how your component looks or what it does. For example, you can add a label like
+			<span class="inline-flex flex-nowrap">
+				<span class="text-params mr-1.5 font-mono">label:</span>
+				<span class="text-string font-mono">$R_1$</span>
+			</span> to make things clearer or to show specific details, like the value of a resistor.
+		</p>
+
 		<NexPrev
 			next={{ href: '/zap/docs/positioning', title: 'Positioning' }}
 			previous={{ href: '/zap/docs/', title: 'Get started' }}

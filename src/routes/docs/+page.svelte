@@ -29,15 +29,14 @@
 	<main class="min-h-dvh flex-auto p-5 pt-10 md:px-8 md:py-10">
 		<h1>Getting started</h1>
 		<p class="max-w-2xl text-lg">
-			Zap is very easy to set up and works out of the box with the <a
-				target="_blank"
-				href="https://typst.app/universe">Typst Universe</a
-			> registry.
+			Draw electronic circuits effortlessly in Typst with Zap. Powered by CeTZ, it offers
+			simple functions to place and connect symbols directly in your documents.
 		</p>
 		<h2>Installation</h2>
 		<p>
 			Whether you're using the Typst online app or running Typst locally on your computer, you
-			can start using Zap by adding the following line at the top of your Typst file.
+			can start using Zap simply by adding <span class="text-import font-mono">import</span> at
+			the top of your Typst file.
 		</p>
 		<Code content={`#import "@preview/zap:${version}"`} />
 		<h2>Create your first circuit</h2>
@@ -76,6 +75,7 @@
 			class="dark:*:border-neutral-border mt-5 grid gap-4 *:flex *:items-center *:gap-2 *:rounded-lg *:border *:border-neutral-200 *:p-4 *:transition *:hover:bg-gray-50 *:hover:shadow-xs md:grid-cols-3 dark:*:hover:bg-neutral-800 dark:*:hover:shadow-black"
 		>
 			<a
+				class="block"
 				target="_blank"
 				href="https://github.com/l0uisgrange/zap/issues/new?template=new_component.yml"
 			>
@@ -83,6 +83,7 @@
 				<span class="text-black decoration-0 dark:text-white">Request a component</span>
 			</a>
 			<a
+				class="block"
 				target="_blank"
 				href="https://github.com/l0uisgrange/zap/issues/new?template=bug_report.yml"
 			>
@@ -90,6 +91,7 @@
 				<span class="text-black decoration-0 dark:text-white">Report bug or error</span>
 			</a>
 			<a
+				class="block"
 				target="_blank"
 				href="https://github.com/l0uisgrange/zap/issues/new?template=feature_request.yml"
 			>
