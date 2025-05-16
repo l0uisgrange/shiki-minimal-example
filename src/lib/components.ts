@@ -13,69 +13,97 @@ import mosfet from './images/mosfet.svg';
 
 export interface Component {
 	name: string;
-	category: string;
+	full_name: string;
 	image: string;
+	quick?: boolean;
+	release?: string;
 }
 
 export const components: Component[] = [
 	{
 		name: 'resistor',
-		category: 'resistor',
-		image: resistor
+		full_name: 'resistor',
+		image: resistor,
+		quick: true,
+		release: '0.1.0'
 	},
 	{
 		name: 'inductor',
-		category: 'inductor',
-		image: inductor
+		full_name: 'inductor',
+		image: inductor,
+		quick: true,
+		release: '0.1.0'
 	},
 	{
 		name: 'isource',
-		category: 'current source',
-		image: isource
+		full_name: 'current source',
+		image: isource,
+		quick: true,
+		release: '0.1.0'
 	},
 	{
 		name: 'vsource',
-		category: 'voltage source',
-		image: vsource
+		full_name: 'voltage source',
+		image: vsource,
+		quick: true,
+		release: '0.1.0'
 	},
 	{
 		name: 'fuse',
-		category: 'fuse',
-		image: fuse
+		full_name: 'fuse',
+		image: fuse,
+		quick: true,
+		release: '0.1.0'
 	},
 	{
 		name: 'diode',
-		category: 'diode',
-		image: diode
+		full_name: 'diode',
+		image: diode,
+		quick: true,
+		release: '0.1.0'
 	},
 	{
 		name: 'led',
-		category: 'light-emitting diode',
-		image: led
+		full_name: 'light-emitting diode',
+		image: led,
+		quick: true,
+		release: '0.1.0'
 	},
 	{
 		name: 'dcmotor',
-		category: 'direct current motor',
-		image: dcmotor
+		full_name: 'direct current motor',
+		image: dcmotor,
+		quick: true,
+		release: '0.1.0'
 	},
 	{
 		name: 'ground',
-		category: 'ground',
-		image: ground
+		full_name: 'ground',
+		image: ground,
+		release: '0.1.0'
 	},
 	{
 		name: 'earth',
-		category: 'earth',
-		image: earth
+		full_name: 'earth',
+		image: earth,
+		release: '0.1.0'
 	},
 	{
 		name: 'bjt',
-		category: 'bipolar junction transistor',
-		image: bjt
+		full_name: 'bipolar junction transistor',
+		image: bjt,
+		release: '0.1.0'
 	},
 	{
 		name: 'mosfet',
-		category: 'field-effect transistor',
-		image: mosfet
+		full_name: 'field-effect transistor',
+		image: mosfet,
+		release: '0.2.0'
+	},
+	{
+		name: 'opamp',
+		full_name: 'operational amplifier',
+		image: mosfet,
+		release: '0.2.0'
 	}
 ];

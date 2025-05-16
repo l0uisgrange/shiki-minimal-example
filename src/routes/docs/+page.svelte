@@ -54,8 +54,8 @@
 				'\n' +
 				'#zap.canvas({\n' +
 				'    import zap: *\n' +
-				'\n' +
-				'    // Your amazing circuit\n' +
+				'    \n' +
+				'    isource("i1", (0,0), (5,0))\n' +
 				'})'}
 		/>
 		<h2>Contribute</h2>

@@ -10,7 +10,7 @@
 
 	onMount(() => {
 		fuse = new Fuse(items, {
-			keys: ['name', 'category'],
+			keys: ['name', 'full_name'],
 			threshold: 0.3,
 			distance: 100,
 			includeScore: true
