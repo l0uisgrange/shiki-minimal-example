@@ -13,8 +13,10 @@
 	class="dark:gray-dark dark:border-neutral-border sticky top-0 left-0 z-10 border-b border-neutral-200 bg-white py-3 dark:bg-neutral-900"
 >
 	<div class="mx-auto flex items-center justify-between gap-5 px-5 py-2.5">
-		<a href="/zap" class="text-lg font-medium">Zap</a>
-		<span class="font-mono text-gray-500 antialiased">v{version}</span>
+		<a href="/zap" class="flex items-center gap-2 text-lg font-medium">
+			<span class="icon-[hugeicons--zap] size-7 text-gray-500"></span> Zap
+		</a>
+		<span class="font-mono text-gray-500">v{version}</span>
 		<a href="/zap/docs" class="ml-auto hidden md:block">Documentation</a>
 		<a href="/zap/examples" class="hidden md:block">Examples</a>
 		<a

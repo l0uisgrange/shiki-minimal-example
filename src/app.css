@@ -25,6 +25,7 @@
     --color-params: #953800;
     --color-string: #0A3069;
     --color-float: #0550AE;
+    --color-new: var(--color-purple-600);
     --color-neutral-200: rgb(209,217,224);
     --color-neutral-900: rgb(13,17,23);
     --color-neutral-border: #3d444d;
@@ -40,13 +41,14 @@
         --color-component: #D2A8FF;
         --color-params: #FFA657 !important;
         --color-string: #A5D6FF;
+        --color-new: var(--color-purple-500);
         --color-float: #79C0FF;
     }
 }
 
 html {
     @apply font-display scroll-smooth;
-    pre {
+    div:not(.dark) > pre {
         @apply bg-neutral-100! antialiased max-w-full! w-full! dark:bg-neutral-800!;
     }
     pre code {
@@ -67,6 +69,9 @@ h1 {
 }
 h2 {
     @apply text-2xl font-semibold mb-3 mt-6;
+}
+h3 {
+    @apply text-lg font-medium mb-3;
 }
 p, ul {
     @apply subpixel-antialiased mb-2;

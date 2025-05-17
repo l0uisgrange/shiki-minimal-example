@@ -102,33 +102,23 @@
 		class="fixed right-0 bottom-0 left-0 z-50 max-h-[80vh] overflow-y-auto rounded-t-2xl bg-white p-6 shadow-lg dark:bg-neutral-900"
 		transition:fly={{ y: 500, duration: 300, easing: quintOut }}
 	>
-		<div class="mb-4 flex items-center justify-between">
-			<h2 class="case flex items-baseline gap-5 text-2xl font-bold capitalize">
-				{selectedComponent.full_name}
-				{#if selectedComponent.release === version}
-					<span class="rounded-full font-mono text-lg text-purple-500">New</span>
-				{/if}
-			</h2>
-			<button
-				aria-label="dede"
-				class="p-r2 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800"
-				onclick={closeDrawer}
-			>
-				<span class="icon-[heroicons--x-mark] size-6"></span>
-			</button>
-		</div>
-
-		<div class="grid gap-7 md:grid-cols-2">
+		<h2 class="flex flex-wrap items-baseline gap-5 text-2xl font-bold capitalize">
+			{selectedComponent.full_name}
+			{#if selectedComponent.release === version}
+				<span class="rounded-full font-mono text-lg text-purple-500">New</span>
+			{/if}
+			{#if selectedComponent.release}
+				<p class="flex items-center gap-2 text-lg font-normal md:ml-auto">
+					<span>Available since</span>
+					<span class="font-mono text-base text-gray-500 lowercase">
+						v{selectedComponent.release}
+					</span>
+				</p>
+			{/if}
+		</h2>
+		<div class="grid items-start gap-7 md:grid-cols-2">
 			<div>
-				{#if selectedComponent.release}
-					<p class="mb-2 flex items-center gap-4 text-lg">
-						<span>Available since</span>
-						<span class="font-mono text-base text-gray-500 antialiased">
-							v{selectedComponent.release}
-						</span>
-					</p>
-				{/if}
-
+				<h3>Example</h3>
 				<Code
 					content={`#import "@preview/zap:${version}"\n` +
 						'\n' +
@@ -138,24 +128,15 @@
 						`    ${selectedComponent.name}("i1", (0,0), (5,0))\n` +
 						'})'}
 				/>
-
-				{#if selectedComponent.quick}
-					<div class="mb-2 flex items-center gap-2">
-						<span class="font-semibold">Quick access:</span>
-						<span
-							class="flex size-5 items-center justify-center rounded-full bg-neutral-900 text-white"
-						>
-							<span class="icon-[hugeicons--trapezoid-line-horizontal] size-3.5"
-							></span>
-						</span>
-					</div>
-				{/if}
 			</div>
-			<img
-				src={selectedComponent.image}
-				alt={selectedComponent.name}
-				class="-p-6 mb-auto w-44 rounded-lg border border-neutral-200 bg-white object-cover p-4 dark:border-neutral-700 dark:bg-neutral-800"
-			/>
+			<div>
+				<h3>Options</h3>
+				<img
+					src={selectedComponent.image}
+					alt={selectedComponent.name}
+					class="w-44 rounded-lg border border-neutral-200 bg-white object-cover dark:border-neutral-700 dark:bg-neutral-800"
+				/>
+			</div>
 		</div>
 		<div
 			class="absolute top-2 left-1/2 h-1 w-10 -translate-x-1/2 transform rounded-full bg-neutral-300 dark:bg-neutral-700"
