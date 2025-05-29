@@ -49,13 +49,13 @@
 		<Notice title="Component suggestion">This project is just getting started. Component suggestions are welcome and appreciated!</Notice>
 		<span class="h-5"></span>
 		<SearchInput items={components} bind:results />
-		<span class="mt-5 flex items-center gap-2 text-sm">
-			<span class="flex size-6 items-center justify-center rounded-full bg-neutral-900 text-white">
+		<span class="mt-5 flex items-start gap-2 text-sm">
+			<span class="-mt-0.5 flex size-6 flex-none items-center justify-center rounded-full bg-neutral-900 text-white">
 				<span class="icon-[hugeicons--trapezoid-line-horizontal] size-4.5"></span>
 			</span>
 			This components can be declared using two coordinates, and will be automatically wired
 		</span>
-		<div class="mt-7 grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+		<div class="mt-7 grid w-full grid-cols-2 gap-6 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-4">
 			{#each results as component}
 				<a
 					href="/zap/docs/components/{component.name}"
@@ -93,7 +93,7 @@
 		transition:fly={{ duration: 200, opacity: 0 }}
 	></button>
 	<div
-		class="fixed top-0 right-0 bottom-auto left-0 z-50 overflow-y-auto bg-white p-6 shadow-lg md:bottom-0 md:left-auto md:w-3/7 md:max-w-xl md:p-8 dark:bg-neutral-900"
+		class="fixed right-0 bottom-0 left-0 z-50 max-h-[80dvh] overflow-y-auto bg-white p-6 shadow-lg md:bottom-auto md:left-auto md:max-h-none md:w-3/7 md:max-w-xl md:p-8 dark:bg-neutral-900"
 		transition:fly={{ x: 500, duration: 300, easing: quintOut }}
 	>
 		<h2 class="mt-0! flex flex-wrap items-baseline gap-5 text-2xl font-bold capitalize">
