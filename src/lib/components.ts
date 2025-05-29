@@ -23,6 +23,8 @@ export interface Component {
 	image: string;
 	quick?: boolean;
 	release?: string;
+	options?: { name: string; alias?: string; default: string; description?: string; type?: string }[];
+	origin?: string;
 }
 
 export const components: Component[] = [
@@ -31,7 +33,23 @@ export const components: Component[] = [
 		full_name: 'resistor',
 		image: resistor,
 		quick: true,
-		release: '0.1.0'
+		release: '0.1.0',
+		options: [
+			{
+				name: 'variable',
+				alias: 'rheostat',
+				type: 'boolean',
+				default: 'false',
+				description: 'draws an arrow accross the resistor'
+			},
+			{
+				name: 'adjustable',
+				alias: 'potentiometer',
+				type: 'boolean',
+				default: 'false',
+				description: 'draws an arrow perpendicular to the resistor'
+			}
+		]
 	},
 	{
 		name: 'inductor',
@@ -59,14 +77,39 @@ export const components: Component[] = [
 		full_name: 'fuse',
 		image: fuse,
 		quick: true,
-		release: '0.1.0'
+		release: '0.1.0',
+		options: [
+			{
+				name: 'asymmetric',
+				alias: 'afuse',
+				type: 'boolean',
+				default: 'false',
+				description: 'draws a black rectangle on one side'
+			}
+		]
 	},
 	{
 		name: 'diode',
 		full_name: 'diode',
 		image: diode,
 		quick: true,
-		release: '0.1.0'
+		release: '0.1.0',
+		options: [
+			{
+				name: 'emitting',
+				alias: 'led',
+				type: 'boolean',
+				default: 'false',
+				description: 'draws arrows coming from the diode'
+			},
+			{
+				name: 'receiving',
+				alias: 'photodiode',
+				type: 'boolean',
+				default: 'false',
+				description: 'draws arrows coming to the diode'
+			}
+		]
 	},
 	{
 		name: 'led',
@@ -98,19 +141,58 @@ export const components: Component[] = [
 		name: 'bjt',
 		full_name: 'bipolar junction transistor',
 		image: bjt,
-		release: '0.1.0'
+		release: '0.1.0',
+		options: [
+			{
+				name: 'envelope',
+				type: 'boolean',
+				default: 'false',
+				description: 'draws a circle around the transistor'
+			}
+		]
 	},
 	{
 		name: 'mosfet',
 		full_name: 'field-effect transistor',
 		image: mosfet,
-		release: '0.2.0'
+		release: '0.2.0',
+		options: [
+			{
+				name: 'envelope',
+				type: 'boolean',
+				default: 'false',
+				description: 'draws a circle around the transistor'
+			},
+			{
+				name: 'channel',
+				alias: 'nmos',
+				default: 'n',
+				description: 'draws a circle around the transistor'
+			},
+			{
+				name: 'mode',
+				alias: 'nmosd',
+				default: 'enhancement'
+			},
+			{
+				name: 'bulk',
+				default: 'internal',
+				description: 'draws a circle around the transistor'
+			}
+		]
 	},
 	{
 		name: 'opamp',
 		full_name: 'operational amplifier',
 		image: opamp,
-		release: '0.2.0'
+		release: '0.2.0',
+		options: [
+			{
+				name: 'invert',
+				type: 'boolean',
+				default: 'false'
+			}
+		]
 	},
 	{
 		name: 'acmotor',
@@ -137,13 +219,15 @@ export const components: Component[] = [
 		full_name: 'rheostat resistor',
 		image: rheostat,
 		quick: true,
-		release: '0.2.0'
+		release: '0.2.0',
+		origin: 'resistor'
 	},
 	{
 		name: 'potentiometer',
 		full_name: 'potentiometer resistor',
 		image: potentiometer,
 		quick: true,
-		release: '0.2.0'
+		release: '0.2.0',
+		origin: 'resistor'
 	}
 ];

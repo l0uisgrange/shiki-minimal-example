@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import NavButton from '$lib/components/NavButton.svelte';
 	import Code from '$lib/components/Code.svelte';
+	import Type from '$lib/components/Type.svelte';
 	import { version } from '$lib';
 
 	let headings: any[] = $state([]);
@@ -68,15 +69,15 @@
 		</p>
 		<ul class="ms-5 block space-y-2.5">
 			<li>
-				<span class="font-mono">ctx</span> <span class="mx-2 rounded-full bg-blue-100 px-2 py-0.5">context</span> the CeTZ drawing context, which
+				<span class="font-mono">ctx</span> <Type type="context" /> the CeTZ drawing context, which
 				you can use to resolve coordinates, strokes, etc.
 			</li>
 			<li>
-				<span class="font-mono">position</span> <span class="mx-2 rounded-full bg-yellow-100 px-2 py-0.5">coordinate</span> a 2d array
+				<span class="font-mono">position</span> <Type type="coordinate" /> a 2d array
 				representing the <span class="text-string font-mono">x</span> and <span class="text-string font-mono">y</span> values of the center coordinate
 			</li>
 			<li>
-				<span class="font-mono">style</span> <span class="mx-2 rounded-full bg-pink-100 px-2 py-0.5">dictionary</span> the styling attributes
+				<span class="font-mono">style</span> <Type type="dictionary" /> the styling attributes
 				resolved with your custom <span class="text-component font-mono">style</span> constant. It also contains basic styling attributes like
 				<span class="text-string font-mono">variant</span>, <span class="text-string font-mono">stroke</span>,
 				<span class="text-string font-mono">fill</span>, etc.
@@ -93,14 +94,14 @@
 		</p>
 		<ul class="ms-5 space-y-2.5">
 			<li>
-				<span class="font-mono">node1</span> <span class="mx-2 rounded-full bg-yellow-100 px-2 py-0.5">coordinate</span> a 2d array representing
+				<span class="font-mono">node1</span> <Type type="coordinate" /> a 2d array representing
 				your component input position, used for automatic wiring
 			</li>
 			<li>
-				<span class="font-mono">node2</span> <span class="mx-2 rounded-full bg-yellow-100 px-2 py-0.5">coordinate</span> a 2d array representing
+				<span class="font-mono">node2</span> <Type type="coordinate" /> a 2d array representing
 				your component output position, used for automatic wiring
 			</li>
-			<li><span class="font-mono">io</span> <span class="rounded-full bg-green-100 px-2 py-0.5">boolean</span> fefe</li>
+			<li><span class="font-mono">io</span> <Type type="boolean" /> fefe</li>
 		</ul>
 	</main>
 	<div class="relative hidden w-72 flex-none p-5 md:block">
