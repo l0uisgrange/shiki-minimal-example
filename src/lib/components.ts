@@ -23,7 +23,7 @@ export interface Component {
 	image: string;
 	quick?: boolean;
 	release?: string;
-	options?: { name: string; alias?: string; default: string; description?: string; type?: string }[];
+	options?: { name: string; alias?: string; default: string; description?: string; type?: string | string[] }[];
 	origin?: string;
 }
 
@@ -40,14 +40,14 @@ export const components: Component[] = [
 				alias: 'rheostat',
 				type: 'boolean',
 				default: 'false',
-				description: 'draws an arrow accross the resistor'
+				description: 'Draws an arrow accross the resistor'
 			},
 			{
 				name: 'adjustable',
 				alias: 'potentiometer',
 				type: 'boolean',
 				default: 'false',
-				description: 'draws an arrow perpendicular to the resistor'
+				description: 'Draws an arrow perpendicular to the resistor'
 			}
 		]
 	},
@@ -84,7 +84,7 @@ export const components: Component[] = [
 				alias: 'afuse',
 				type: 'boolean',
 				default: 'false',
-				description: 'draws a black rectangle on one side'
+				description: 'Draws a black rectangle on one side'
 			}
 		]
 	},
@@ -100,14 +100,14 @@ export const components: Component[] = [
 				alias: 'led',
 				type: 'boolean',
 				default: 'false',
-				description: 'draws arrows coming from the diode'
+				description: 'Draws arrows coming from the diode'
 			},
 			{
 				name: 'receiving',
 				alias: 'photodiode',
 				type: 'boolean',
 				default: 'false',
-				description: 'draws arrows coming to the diode'
+				description: 'Draws arrows coming to the diode'
 			}
 		]
 	},
@@ -147,7 +147,7 @@ export const components: Component[] = [
 				name: 'envelope',
 				type: 'boolean',
 				default: 'false',
-				description: 'draws a circle around the transistor'
+				description: 'Draws a circle around the transistor'
 			}
 		]
 	},
@@ -161,23 +161,27 @@ export const components: Component[] = [
 				name: 'envelope',
 				type: 'boolean',
 				default: 'false',
-				description: 'draws a circle around the transistor'
+				description: 'Draws a circle around the transistor'
 			},
 			{
 				name: 'channel',
 				alias: 'nmos',
+				type: ['"n"', '"p"'],
 				default: 'n',
-				description: 'draws a circle around the transistor'
+				description: 'Draws a circle around the transistor'
 			},
 			{
 				name: 'mode',
 				alias: 'nmosd',
-				default: 'enhancement'
+				type: ['"enhancement"', '"depletion"'],
+				default: 'enhancement',
+				description: 'Chooses between a dashed line and a continuous one'
 			},
 			{
 				name: 'bulk',
+				type: ['"internal"', '"external"', 'none'],
 				default: 'internal',
-				description: 'draws a circle around the transistor'
+				description: 'Changes the origin and anchors of the bulk'
 			}
 		]
 	},

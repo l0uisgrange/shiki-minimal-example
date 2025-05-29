@@ -93,26 +93,26 @@
 		transition:fly={{ duration: 200, opacity: 0 }}
 	></button>
 	<div
-		class="fixed top-0 right-0 bottom-auto left-0 z-50 overflow-y-auto bg-white p-6 shadow-lg md:bottom-0 md:left-auto md:w-1/3 md:max-w-xl dark:bg-neutral-900"
+		class="fixed top-0 right-0 bottom-auto left-0 z-50 overflow-y-auto bg-white p-6 shadow-lg md:bottom-0 md:left-auto md:w-3/7 md:max-w-xl md:p-8 dark:bg-neutral-900"
 		transition:fly={{ x: 500, duration: 300, easing: quintOut }}
 	>
-		<h2 class="mt-0 gap-5 text-2xl font-bold capitalize">
+		<h2 class="mt-0! flex flex-wrap items-baseline gap-5 text-2xl font-bold capitalize">
 			{selectedComponent.full_name}
 			{#if selectedComponent.release === version}
 				<span class="rounded-full font-mono text-lg text-purple-500">New</span>
 			{/if}
-			{#if selectedComponent.release}
-				<p class="mt-1 flex items-center gap-1 text-sm font-normal">
-					<span>Available since</span>
-					<span class="font-mono text-xs text-gray-500 lowercase">
-						v{selectedComponent.release}
-					</span>
-				</p>
-			{/if}
 		</h2>
+		{#if selectedComponent.release}
+			<p class="mt-1 flex items-center gap-1 font-normal">
+				<span>Available since</span>
+				<span class="font-mono text-sm text-gray-500 lowercase">
+					v{selectedComponent.release}
+				</span>
+			</p>
+		{/if}
 		<div class="grid items-start">
 			<div>
-				<h3>Example</h3>
+				<h3 class="mt-2">Example</h3>
 				<p>Here's a quick example on how to use this component.</p>
 				<Code
 					content={`#import "@preview/zap:${version}"\n` +
@@ -124,21 +124,23 @@
 						'})'}
 				/>
 			</div>
-			<div class="mt-2">
+			<div class="mt-3">
 				<h3>Options</h3>
 				<p>You are free to use these options as parameters in your component declaration to customize the appearance.</p>
-				<ul class="ms-5 space-y-2.5">
+				<ul class="ms-5 list-disc space-y-2.5">
 					{#each selectedComponent.options ?? [] as opt}
 						<li>
 							<span class="text-params font-mono">{opt.name}</span>
 							<Type type={opt.type} />
-							{#if opt.default}
-								(default: <span class="text-string font-mono">{opt.default}</span>)
-							{/if}
-							{#if opt.alias}
-								(alias: <span class="text-component font-mono">{opt.alias}</span>)
-							{/if}
-							{opt.description}
+							<p class="normal-case">{opt.description}</p>
+							<ul class="ms-5">
+								{#if opt.default}
+									<li>Default value: <span class="text-string font-mono">{opt.default}</span></li>
+								{/if}
+								{#if opt.alias}
+									<li>Alias: <span class="text-component font-mono">{opt.alias}</span></li>
+								{/if}
+							</ul>
 						</li>
 					{:else}
 						<span class="italic text-gray-500">No options available for this component</span>
