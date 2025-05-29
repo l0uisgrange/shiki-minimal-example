@@ -14,7 +14,7 @@
 >
 	<div class="mx-auto flex items-center justify-between gap-5 px-5 py-2.5">
 		<a href="/zap" class="flex items-center gap-2 text-lg font-medium">
-			<span class="icon-[hugeicons--zap] size-7 text-gray-500"></span> Zap
+			<span class="icon-[hugeicons--zap] text-primary size-7"></span> Zap
 		</a>
 		<span class="font-mono text-gray-500">v{version}</span>
 		<a href="/zap/docs" class="ml-auto hidden md:block">Documentation</a>

@@ -33,7 +33,6 @@
 	"dependencies": {
 		"fuse.js": "^7.1.0",
 		"shiki": "^3.4.2",
-		"shiki-magic-move": "^1.1.0",
-		"typeit": "^8.8.7"
+		"shiki-magic-move": "^1.1.0"
 	}
 }

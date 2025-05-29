@@ -81,7 +81,7 @@
 			<span class="text-import font-mono">set-style</span> options.
 		</p>
 
-		<NexPrev next={{ href: '/zap/docs/positioning', title: 'Positioning' }} />
+		<NexPrev previous={{ href: '/zap/docs/decorations', title: 'Decorations' }} />
 	</main>
 	<div class="relative hidden w-72 flex-none p-5 md:block">
 		<ul class="sticky top-32 block">

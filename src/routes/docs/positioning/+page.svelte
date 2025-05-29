@@ -123,7 +123,7 @@
 			>
 		</p>
 		<NexPrev
-			next={{ href: '/zap/docs/styling', title: 'Styling' }}
+			next={{ href: '/zap/docs/decorations', title: 'Decorations' }}
 			previous={{ href: '/zap/docs/basics', title: 'Basics' }}
 		/>
 	</main>

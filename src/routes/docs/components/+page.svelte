@@ -65,7 +65,7 @@
 						class="h-40 w-full overflow-hidden object-cover transition group-hover:scale-103"
 					/>
 					<div
-						class="absolute bottom-3 left-3 rounded-full bg-neutral-900/10 px-2 backdrop-blur-3xl"
+						class="absolute bottom-3 left-3 rounded-full bg-neutral-900/10 px-2 text-black backdrop-blur-3xl"
 					>
 						{component.name}
 					</div>

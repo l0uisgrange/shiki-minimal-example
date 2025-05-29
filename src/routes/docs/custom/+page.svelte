@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import NavButton from '$lib/components/NavButton.svelte';
-	import NexPrev from '$lib/components/NexPrev.svelte';
 	import Code from '$lib/components/Code.svelte';
 	import { version } from '$lib';
 
@@ -27,25 +26,42 @@
 
 <div class="items-stretch md:flex">
 	<main class="min-h-dvh p-5 pt-10 md:px-8 md:py-10">
-		<h1>Basics</h1>
+		<h1>Custom components</h1>
 		<p class="max-w-2xl text-lg">
-			Before diving into the complexity, it is necessary to explore some fundamental concepts from Zap, which will help you start very easily.
+			For circuits demanding specialized components, Zap delivers the intuitive tools you need to easily manufacture your own.
 		</p>
-
-		<h2>Canvas</h2>
+		<h2>Base template</h2>
 		<p>
-			All diagrams drawn must be contained within a <span class="text-component font-mono">canvas</span> block. This block initializes the necessary
-			drawing environment, managed by CeTZ, and allows you to place your components.
+			Let's create a new component, called <span class="text-component font-mono">square</span>. Start by copying the code below into your own
+			Typst project. You can already see you can use the quick <span class="text-component font-mono">component</span> and
+			<span class="text-component font-mono">interface</span> utilities of Zap, which automatically handle wiring and positioning for you.
 		</p>
-		<Code
-			content={`#import "@preview/zap:${version}"\n\n#zap.canvas({\n    import zap: *\n\n    resistor("r1", (0,0), (3,0), label: $R_1$)\n})`}
-		/>
+		<div class="grid">
+			<Code
+				content={`#import "@preview/zap:${version}": component, interface, draw as d\n` +
+					'\n' +
+					'#let square(name, node, ..params) = {\n' +
+					'    // New component style\n' +
+					'    let style = (\n' +
+					'        // Component styling here\n' +
+					'    )' +
+					'    \n' +
+					'    \n' +
+					'    // Drawing function\n' +
+					'    let draw(ctx, position, style) = {\n' +
+					'        interface((-style.width / 2, -style.height / 2), (style.width / 2, style.height / 2), io: position.len() < 2)\n' +
+					'        \n' +
+					'        // Draw the component here\n' +
+					'    }\n' +
+					'   \n' +
+					'    // Componant call\n' +
+					'    component("square", name, node, draw: draw, style: style, ..params)\n' +
+					'}'}
+			/>
+		</div>
 
-		<h2>Declaration</h2>
-		<p>
-			After you set up your canvas, you'll start adding different items called components. You add these components by using their own special
-			functions.
-		</p>
+		<h2>Draw component</h2>
+		<p>Once</p>
 		<div class="mb-2 flex flex-wrap items-center justify-center gap-1 px-4 py-4 font-mono text-sm *:rounded-full *:px-3 *:py-1 *:font-light">
 			<div class="bg-component/10 text-component">component</div>
 			(
@@ -78,8 +94,6 @@
 				<span class="text-string font-mono">$R_1$</span>
 			</span> to make things clearer or to show specific details, like the value of a resistor.
 		</p>
-
-		<NexPrev next={{ href: '/zap/docs/positioning', title: 'Positioning' }} previous={{ href: '/zap/docs/', title: 'Get started' }} />
 	</main>
 	<div class="relative hidden w-72 flex-none p-5 md:block">
 		<ul class="sticky top-32 block">

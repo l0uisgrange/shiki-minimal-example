@@ -32,6 +32,8 @@
     --color-neutral-800: #151b23;
     --color-neutral-100: rgb(246, 248, 250);
     --color-blue-600: #0969da;
+    --color-primary: #3e5fff;
+    --color-red: #e02f1f;
     --font-mono: 'Mona Space', monospace;
 }
 
