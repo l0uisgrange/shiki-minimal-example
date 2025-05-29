@@ -29,7 +29,7 @@
 <div class="flex w-screen flex-col px-5 py-14 md:min-h-screen md:py-20">
 	<span class="text-new font-mono">Brand New Package</span>
 	<span class="mt-2 max-w-7xl text-4xl font-medium tracking-tight text-balance font-stretch-expanded md:text-8xl">
-		Your Typst circuit drawing <span class="icon-[hugeicons--paint-brush-04] -mx-0.5 -mb-2 size-20"></span> companion
+		Your Typst circuit drawing <span class="icon-[hugeicons--paint-brush-04] -mx-0.5 -mb-2 size-9 md:size-20"></span> companion
 	</span>
 	<div class="mt-8 flex items-center gap-3">
 		<a

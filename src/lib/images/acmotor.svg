@@ -76,9 +76,9 @@
                         </g>
                     </g>
                     <g transform="translate(76.35433070866142 85.03937007874016)">
-                        <path class="typst-shape" fill="none" d="M 0 0 L 17.370079 0 L 17.370079 10.370079 L 0 10.370079 L 0 0 Z "/>
+                        <path class="typst-shape" fill="none" d="M 0 0 L 17.370079 0 L 17.370079 11.370079 L 0 11.370079 L 0 0 Z "/>
                     </g>
-                    <g transform="translate(76.35433067716536 85.03936998425196)">
+                    <g transform="translate(76.35433067716536 85.0393699527559)">
                         <g class="typst-group">
                             <g>
                                 <g transform="translate(0 0)">
@@ -88,16 +88,7 @@
                                                 <g class="typst-group">
                                                     <g>
                                                         <g transform="translate(0 0)">
-                                                            <path class="typst-shape" fill="none" stroke="#000000" stroke-width="0.55" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" d="M 0 0 L 10 0 "/>
-                                                        </g>
-                                                        <g transform="translate(0 3)">
-                                                            <path class="typst-shape" fill="none" stroke="#000000" stroke-width="0.55" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" d="M 0 0 L 2.3333333 0 "/>
-                                                        </g>
-                                                        <g transform="translate(3.833333333333334 3)">
-                                                            <path class="typst-shape" fill="none" stroke="#000000" stroke-width="0.55" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" d="M 0 0 L 2.3333333 0 "/>
-                                                        </g>
-                                                        <g transform="translate(7.666666666666666 3)">
-                                                            <path class="typst-shape" fill="none" stroke="#000000" stroke-width="0.55" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" d="M 2.3333333 0 L 0 0 "/>
+                                                            <path class="typst-shape" fill="none" stroke="#000000" stroke-width="0.55" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" d="M 0 2 C 0.61353064 1.018538 1.3654293 0 2.5 0 C 4.897004 0 5.102996 4 7.5 4 C 8.634571 4 9.38647 2.981462 10 2 "/>
                                                         </g>
                                                     </g>
                                                 </g>

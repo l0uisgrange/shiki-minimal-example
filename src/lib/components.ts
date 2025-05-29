@@ -10,6 +10,12 @@ import ground from './images/ground.svg';
 import earth from './images/earth.svg';
 import bjt from './images/bjt.svg';
 import mosfet from './images/mosfet.svg';
+import opamp from './images/opamp.svg';
+import acmotor from './images/acmotor.svg';
+import frame from './images/frame.svg';
+import capa from './images/capacitor.svg';
+import rheostat from './images/rheostat.svg';
+import potentiometer from './images/potentiometer.svg';
 
 export interface Component {
 	name: string;
@@ -84,7 +90,7 @@ export const components: Component[] = [
 	},
 	{
 		name: 'earth',
-		full_name: 'earth',
+		full_name: 'earth ground',
 		image: earth,
 		release: '0.1.0'
 	},
@@ -103,7 +109,41 @@ export const components: Component[] = [
 	{
 		name: 'opamp',
 		full_name: 'operational amplifier',
-		image: mosfet,
+		image: opamp,
+		release: '0.2.0'
+	},
+	{
+		name: 'acmotor',
+		full_name: 'alternative current motor',
+		image: acmotor,
+		quick: true,
+		release: '0.2.0'
+	},
+	{
+		name: 'frame',
+		full_name: 'frame ground',
+		image: frame,
+		release: '0.2.0'
+	},
+	{
+		name: 'capacitor',
+		full_name: 'capacitor',
+		image: capa,
+		quick: true,
+		release: '0.1.0'
+	},
+	{
+		name: 'rheostat',
+		full_name: 'rheostat resistor',
+		image: rheostat,
+		quick: true,
+		release: '0.2.0'
+	},
+	{
+		name: 'potentiometer',
+		full_name: 'potentiometer resistor',
+		image: potentiometer,
+		quick: true,
 		release: '0.2.0'
 	}
 ];

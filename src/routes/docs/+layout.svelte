@@ -26,7 +26,7 @@
 		<NavButton href="/zap/docs/styling" newFeature active={page.url.pathname === '/zap/docs/styling'}>Styling</NavButton>
 		<div class="h-6"></div>
 		<NavButton href="/zap/docs/components" active={page.url.pathname.startsWith('/zap/docs/components')}>Components</NavButton>
-		<NavButton href="/zap/docs/custom" newFeature active={page.url.pathname.startsWith('/zap/docs/custom')}>Custom components</NavButton>
+		<NavButton nextFeature>Custom components</NavButton>
 	</div>
 	<article class="flex-auto">
 		{@render children()}

@@ -42,14 +42,10 @@
 	<main class="min-h-dvh flex-auto p-5 pt-10 md:px-8 md:py-10">
 		<h1>Components</h1>
 		<p class="max-w-2xl text-lg">
-			The package offers a wide range of standardized electronic component symbols according
-			to international standards.
+			The package offers a wide range of standardized electronic component symbols according to international standards.
 		</p>
 		<h2>Components list</h2>
-		<Notice title="Component suggestion"
-			>This project is just getting started. Component suggestions are welcome and
-			appreciated!</Notice
-		>
+		<Notice title="Component suggestion">This project is just getting started. Component suggestions are welcome and appreciated!</Notice>
 		<span class="h-5"></span>
 		<SearchInput items={components} bind:results />
 		<div class="mt-9 grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -57,32 +53,19 @@
 				<a
 					href="/zap/docs/components/{component.name}"
 					onclick={(e) => openDrawer(component, e)}
-					class="dark:border-neutral-border group relative cursor-pointer overflow-hidden rounded-lg border border-neutral-200 text-current! decoration-0! hover:shadow-xs"
+					class="dark:border-neutral-border group relative flex h-40 cursor-pointer items-center overflow-hidden rounded-lg border border-neutral-200 text-current! decoration-0! hover:shadow-xs"
 				>
-					<img
-						src={component.image}
-						alt={component.name}
-						class="h-40 w-full overflow-hidden object-cover transition group-hover:scale-103"
-					/>
-					<div
-						class="absolute bottom-3 left-3 rounded-full bg-neutral-900/10 px-2 text-black backdrop-blur-3xl"
-					>
+					<img src={component.image} alt={component.name} class="w-full overflow-hidden object-contain transition group-hover:scale-105" />
+					<div class="absolute bottom-3 left-3 rounded-full bg-neutral-900/10 px-2 text-black backdrop-blur-3xl">
 						{component.name}
 					</div>
 					{#if component.quick}
-						<span
-							class="absolute right-3 bottom-3 flex size-6 items-center justify-center rounded-full bg-neutral-900 text-white"
-						>
-							<span class="icon-[hugeicons--trapezoid-line-horizontal] size-4.5"
-							></span>
+						<span class="absolute right-3 bottom-3 flex size-6 items-center justify-center rounded-full bg-neutral-900 text-white">
+							<span class="icon-[hugeicons--trapezoid-line-horizontal] size-4.5"></span>
 						</span>
 					{/if}
 					{#if component.release === version}
-						<span
-							class="absolute top-2 left-3 my-0 rounded-full font-mono text-purple-500"
-						>
-							New
-						</span>
+						<span class="absolute top-2 left-3 my-0 rounded-full font-mono text-purple-500"> New </span>
 					{/if}
 				</a>
 			{/each}
@@ -138,8 +121,6 @@
 				/>
 			</div>
 		</div>
-		<div
-			class="absolute top-2 left-1/2 h-1 w-10 -translate-x-1/2 transform rounded-full bg-neutral-300 dark:bg-neutral-700"
-		></div>
+		<div class="absolute top-2 left-1/2 h-1 w-10 -translate-x-1/2 transform rounded-full bg-neutral-300 dark:bg-neutral-700"></div>
 	</div>
 {/if}
