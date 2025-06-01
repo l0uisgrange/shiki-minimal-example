@@ -12,7 +12,7 @@
 	let selectedComponent: Component | null = $state(null);
 	let isDrawerOpen = $state(false);
 
-	function openDrawer(component: Component, event: MouseEvent) {
+	function openDrawer(event: MouseEvent, component: Component) {
 		event.preventDefault();
 		selectedComponent = component;
 		isDrawerOpen = true;
@@ -59,7 +59,7 @@
 			{#each results as component}
 				<a
 					href="/zap/docs/components/{component.name}"
-					onclick={(e) => openDrawer(component, e)}
+					onclick={(e) => openDrawer(e, component)}
 					class="dark:border-neutral-border group relative flex h-40 cursor-pointer items-center justify-center overflow-hidden rounded-lg border border-neutral-200 text-current! decoration-0! hover:shadow-xs"
 				>
 					<img
@@ -93,7 +93,7 @@
 		transition:fly={{ duration: 200, opacity: 0 }}
 	></button>
 	<div
-		class="fixed right-0 bottom-0 left-0 z-50 max-h-[80dvh] overflow-y-auto bg-white p-6 shadow-lg md:bottom-auto md:left-auto md:max-h-none md:w-3/7 md:max-w-xl md:p-8 dark:bg-neutral-900"
+		class="md:h-dvg fixed right-0 bottom-0 left-0 z-50 max-h-[80dvh] overflow-y-auto bg-white p-6 shadow-lg md:top-0 md:left-auto md:max-h-none md:w-3/7 md:max-w-xl md:p-8 dark:bg-neutral-900"
 		transition:fly={{ x: 500, duration: 300, easing: quintOut }}
 	>
 		<h2 class="mt-0! flex flex-wrap items-baseline gap-5 text-2xl font-bold capitalize">

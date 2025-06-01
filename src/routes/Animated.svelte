@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { createHighlighter } from 'shiki';
 	import { ShikiMagicMove } from 'shiki-magic-move/svelte';
+	import * as typstLang from '$lib/components/typst.tmLanguage.json';
 
 	import 'shiki-magic-move/dist/style.css';
 	import { onMount } from 'svelte';
@@ -9,7 +10,7 @@
 
 	const highlighter = createHighlighter({
 		themes: ['github-dark-default', 'github-light-default'],
-		langs: ['typst']
+		langs: [typstLang as any]
 	});
 
 	let isDarkMode = $state(false);

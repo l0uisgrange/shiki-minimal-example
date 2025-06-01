@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { createHighlighter, type Highlighter } from 'shiki';
 	import { onMount } from 'svelte';
+	import * as typstLang from './typst.tmLanguage.json';
 
 	let { content, language = 'typst', dark = false } = $props();
 
@@ -15,7 +16,7 @@
 		});
 		highlighter = await createHighlighter({
 			themes: dark ? ['github-dark-default'] : ['github-light-default', 'github-dark-default'],
-			langs: ['typst', 'latex']
+			langs: [typstLang as any, 'latex']
 		});
 	});
 
